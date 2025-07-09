@@ -1,0 +1,401 @@
+{
+  "type": "object",
+  "properties": {
+    "Schema": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "CompressionType": {
+      "type": "string"
+    },
+	"IsTemporal": {
+        "type": "boolean"
+    },
+	"UpdateFillFactor": {
+		"type": "boolean"
+	},
+	"ShouldApplyExpression": {
+		"type": "string"
+	},
+	"EnableCDC": {
+		"type": "boolean"
+	},
+    "Description": {
+      "type": "string",
+      "maxLength": 1000,
+	  "minLength": 0
+    },
+    "Domain": {
+      "type": "string",
+	  "pattern": "Employee|Company|Customer|Order",
+    },
+	"IsSystemDeliveredContent": {
+	  "type": "boolean"
+	},
+	"MaxPageSizeForLookups": {
+	  "type": "integer",
+	  "maximum": 100,
+	  "minimum": 5,
+	  "multipleOf": 5
+	},
+	"DateAdded": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"CustomNumber": {
+	  "type": "number",
+	  "maximum": 21,
+	  "minimum": 3,
+	  "multipleOf": 3
+	},
+    "Comment": {
+      "description": "MEMO",
+      "type": "string"
+    },
+    "SQLExpression": {
+      "description": "SQL",
+	  "title": "SQL Expression",
+      "type": "string"
+    },
+    "MyLookup": {
+      "description": "DROPDOWN:MyLookupItems",
+      "type": "string"
+    },
+    "DynamicObject": {
+      "description": "DICTIONARY",
+      "type": "object"
+    },
+	"Categories": {
+      "description": "CHECKLIST:Categories",
+      "type": "array",
+      "items": {
+        "type": "string"
+	  }
+	},
+    "Columns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "DataType": {
+            "type": "string"
+          },
+          "Nullable": {
+            "type": "boolean"
+          },
+          "Default": {
+            "type": "string"
+          },
+          "CheckExpression": {
+            "type": "string"
+          },
+          "ComputedExpression": {
+            "type": "string"
+          },
+          "Persisted": {
+            "type": "boolean"
+          },
+		  "Sparse": {
+		    "type": "boolean"
+		  },
+		  "Collation": {
+			"type": "string"
+		  },
+		  "DataMaskFunction": {
+			"type": "string"
+		  },
+		  "EncryptionType": {
+			"type": "string"
+		  },
+		  "EncryptionKey": {
+			"type": "string"
+		  },
+		  "EncryptionAlgorithm": {
+			"type": "string"
+		  },
+		  "ShouldApplyExpression": {
+			"type": "string"
+		  },
+		  "EnableCDC": {
+			"type": "boolean"
+		  },
+          "Documentation": {
+            "type": "object",
+            "properties": {
+              "Description": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "DataSource": {
+                "type": "string",
+                "enum": ["Spreadsheet", "User Input", "API", "Custom Import"]
+              },
+              "DataSource2": {
+                "type": "string",
+                "enum": ["Spreadsheet", "User Input", "API", "Custom Import"],
+				"meta:enum": {
+				  "Spreadsheet": "Spreadsheet Description",
+				  "User Input": "User Input Description",
+				  "API": "API Description",
+				  "Custom Import": "Custom Import Description"
+				}
+              },
+              "AddedOn": {
+                "type": "string",
+                "format": "date"
+              },
+              "JiraNumber": {
+                "type": "string",
+				"minLength": 5,
+                "maxLength": 20
+              },
+              "CustomTime": {
+                "type": "string",
+                "format": "time"
+              },
+              "CustomDateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "ReportingAllowed": {
+                "type": "boolean"
+			  },
+    		  "Comment": {
+    		    "description": "MEMO",
+    		    "type": "string"
+    		  },
+    		  "SQLExpression": {
+          		"description": "SQL",
+	      		"title": "SQL Expression",
+          		"type": "string"
+    		  },
+    		  "MyMissingLookup": {
+          		"description": "DROPDOWN:IntentionallyMissing",
+          		"type": "string"
+    		  },
+    		  "DynamicObject": {
+          		"description": "DICTIONARY",
+          		"type": "object"
+    		  },
+			  "Categories": {
+          		"description": "CHECKLIST:Categories",
+          		"type": "array",
+          		"items": {
+            	  "type": "string"
+	  		    }
+	  		  },
+    		  "UnknownArray": {
+          		"type": "array"
+    		  },
+    		  "UnknownType": {
+          		"type": "null"
+    		  },
+			  "BadCheckList": {
+          		"description": "CHECKLIST:IntentionallyMissing",
+          		"type": "array",
+          		"items": {
+            	  "type": "string"
+	  		    }
+	  		  }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "DataType"
+        ]
+      }
+    },
+    "Indexes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "CompressionType": {
+            "type": "string"
+          },
+          "PrimaryKey": {
+            "type": "boolean"
+          },
+          "Unique": {
+            "type": "boolean"
+          },
+          "UniqueConstraint": {
+            "type": "boolean"
+          },
+          "Clustered": {
+            "type": "boolean"
+          },
+          "ColumnStore": {
+            "type": "boolean"
+          },
+          "FillFactor": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "IndexColumns": {
+            "type": "string"
+          },
+          "IncludeColumns": {
+            "type": "string"
+          },
+          "FilterExpression": {
+            "type": "string"
+          },
+		  "ShouldApplyExpression": {
+			"type": "string"
+		  }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "IndexColumns"
+        ]
+      }
+    },
+    "ForeignKeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Columns": {
+            "type": "string"
+          },
+          "RelatedTableSchema": {
+            "type": "string"
+          },
+          "RelatedTable": {
+            "type": "string"
+          },
+          "RelatedColumns": {
+            "type": "string"
+          },
+		  "CascadeOnDelete": {
+			"type": "boolean",
+			"deprecated": true
+		  },
+		  "CascadeOnUpdate": {
+			"type": "boolean",
+			"deprecated": true
+		  },
+		  "ShouldApplyExpression": {
+			"type": "string"
+		  },
+		  "DeleteAction": {
+			"type": "string"
+		  },
+		  "UpdateAction": {
+			"type": "string"
+		  }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Columns",
+          "RelatedTable",
+          "RelatedColumns"
+        ]
+      }
+    },
+    "CheckConstraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Expression": {
+            "type": "string"
+          },
+		  "ShouldApplyExpression": {
+			"type": "string"
+		  }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Expression"
+        ]
+      }
+    },
+    "Statistics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Columns": {
+            "type": "string"
+          },
+          "SampleSize": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "FilterExpression": {
+            "type": "string"
+          },
+		  "ShouldApplyExpression": {
+			"type": "string"
+		  }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Columns"
+        ]
+      }
+    },
+    "FullTextIndex": {
+        "type": "object",
+        "properties": {
+          "FullTextCatalog": {
+            "type": "string"
+          },
+          "KeyIndex": {
+            "type": "string"
+          },
+          "ChangeTracking": {
+            "type": "string"
+          },
+          "StopList": {
+            "type": "string"
+          },
+          "Columns": {
+            "type": "string"
+          },
+		  "ShouldApplyExpression": {
+			"type": "string"
+		  }
+        },
+        "additionalProperties": false,
+        "required": [
+          "FullTextCatalog",
+          "KeyIndex",
+          "Columns"
+        ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Name",
+    "Columns"
+  ]
+}

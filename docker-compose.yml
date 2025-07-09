@@ -1,0 +1,41 @@
+services:
+  quench-validproduct:
+    image: schemasmithyfree/schemaquenchenterprisedemo:latest
+    environment:
+      - QuenchSettings_Target__Server=demoserver
+      - QuenchSettings_Target__User=${MSSQL_SA_USERNAME}
+      - QuenchSettings_Target__Password=${MSSQL_SA_PASSWORD}
+      - QuenchSettings_SchemaPackagePath=/metadata
+    volumes:
+      - ./ValidProduct:/metadata
+    depends_on:
+      demoserver:
+        condition: service_healthy
+
+  demoserver:
+    build:
+      context: ./demoserver
+      dockerfile: demoserver.Dockerfile
+    restart: always
+    ports:
+      - "${MSSQL_PORT:-1440}:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_USERNAME=${MSSQL_SA_USERNAME}    
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}    
+    healthcheck:
+      test: /tmp/devdatabase/is-ready.sh
+      interval: 60s
+      timeout: 3s
+      retries: 10
+      start_period: 60s
+
+  completed:
+    image: alpine
+    entrypoint: ["echo"]
+    command: ["completed"]
+    depends_on:
+      demoserver:
+        condition: service_healthy
+      quench-validproduct:
+        condition: service_completed_successfully
