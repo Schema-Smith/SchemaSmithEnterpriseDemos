@@ -1,0 +1,19 @@
+{
+  "Name": "AdventureWorks",
+  "DatabaseIdentificationScript": "SELECT [Name] FROM master.sys.databases WHERE [Name] = '{{AdventureWorksDb}}'",
+  "UpdateFillFactor": true,
+  "ScriptFolders": [
+      { "FolderPath" : "MigrationScripts/Before", "QuenchSlot" : "Before" },
+      { "FolderPath" : "Schemas", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "DataTypes", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "XMLSchemaCollections", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "FullTextCatalogs", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "FullTextStopLists", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "Functions", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "Views", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "Procedures", "QuenchSlot" : "Objects" },
+      { "FolderPath" : "Triggers", "QuenchSlot" : "AfterTablesObjects" },
+      { "FolderPath" : "DDLTriggers", "QuenchSlot" : "AfterTablesObjects" },
+      { "FolderPath" : "MigrationScripts/After", "QuenchSlot" : "After" }
+    ]
+}

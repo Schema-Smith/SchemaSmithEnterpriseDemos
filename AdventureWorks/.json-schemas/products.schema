@@ -1,0 +1,61 @@
+{
+  "type": "object",
+    "properties": {
+        "Name": {
+            "type": "string"
+        },
+        "ValidationScript": {
+            "type": "string"
+        },
+        "TemplateOrder": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "ScriptTokens": {
+            "type": "object"
+        },
+        "ScriptFolders": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "FolderPath": {
+                        "type": "string"
+                    },
+                    "ServerToQuench": {
+                        "type": "string",
+                        "enum": ["Primary", "Secondary", "Both"]
+                    },
+                    "QuenchSlot": {
+                        "type": "string",
+                        "enum": ["Before", "After"]
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "FolderPath",
+                    "QuenchSlot"
+                ]
+            }
+        },
+        "BranchNameFile": {
+            "type": "string"
+        },
+        "BeforeBranchNameMask": {
+            "type": "string"
+        },
+        "AfterBranchNameMask": {
+            "type": "string"
+        },
+        "DropUnknownIndexes": {
+            "type": "boolean"
+        }
+    },
+  "additionalProperties": false,
+  "required": [
+    "Name",
+    "ValidationScript"
+  ]
+}
