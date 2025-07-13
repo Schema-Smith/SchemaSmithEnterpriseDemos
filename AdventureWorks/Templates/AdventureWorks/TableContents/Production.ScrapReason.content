@@ -1,4 +1,4 @@
-DECLARE @data VARCHAR(MAX) = '[
+[
     {
         "ScrapReasonID": 1,
         "Name": "Brake assembly not as ordered",
@@ -79,24 +79,4 @@ DECLARE @data VARCHAR(MAX) = '[
         "Name": "Wheel misaligned",
         "ModifiedDate": "2008-04-30T00:00:00"
     }
-]'
-
-MERGE INTO Production.ScrapReason AS Target
-USING (
-    SELECT *
-    FROM OPENJSON(@data)
-    WITH (
-        ScrapReasonID smallint,
-        Name nvarchar(50),
-        ModifiedDate datetime
-    )
-) AS Source
-ON Target.ScrapReasonID = Source.ScrapReasonID
-WHEN MATCHED THEN
-    UPDATE SET
-        Name = Source.Name,
-        ModifiedDate = Source.ModifiedDate
-WHEN NOT MATCHED THEN
-    INSERT (Name, ModifiedDate)
-    VALUES (Source.Name, Source.ModifiedDate);
-    
+]

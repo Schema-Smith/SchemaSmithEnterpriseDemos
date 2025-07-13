@@ -1,19 +1,75 @@
 {
   "Name": "AdventureWorks",
   "DatabaseIdentificationScript": "SELECT [Name] FROM master.sys.databases WHERE [Name] = '{{AdventureWorksDb}}'",
-  "UpdateFillFactor": true,
+  "IndexOnlyTableQuenches": false,
   "ScriptFolders": [
-      { "FolderPath" : "MigrationScripts/Before", "QuenchSlot" : "Before" },
-      { "FolderPath" : "Schemas", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "DataTypes", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "XMLSchemaCollections", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "FullTextCatalogs", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "FullTextStopLists", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "Functions", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "Views", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "Procedures", "QuenchSlot" : "Objects" },
-      { "FolderPath" : "Triggers", "QuenchSlot" : "AfterTablesObjects" },
-      { "FolderPath" : "DDLTriggers", "QuenchSlot" : "AfterTablesObjects" },
-      { "FolderPath" : "MigrationScripts/After", "QuenchSlot" : "After" }
-    ]
+    {
+      "FolderPath": "MigrationScripts/Before",
+      "QuenchSlot": "Before"
+    },
+    {
+      "FolderPath": "Schemas",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "DataTypes",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "XMLSchemaCollections",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "FullTextCatalogs",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "FullTextStopLists",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Functions",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Views",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Procedures",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Triggers",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "DDLTriggers",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "MigrationScripts/After",
+      "QuenchSlot": "After"
+    }
+  ],
+  "ServerToQuench": "Primary",
+  "ScriptTokens": {
+    "HumanResourcesDepartmentData": "<*File*>TableContents/HumanResources.Department.content",
+    "HumanResourcesShiftData": "<*File*>TableContents/HumanResources.Shift.content",
+    "PersonAddressTypeData": "<*File*>TableContents/Person.AddressType.content",
+    "PersonContactTypeData": "<*File*>TableContents/Person.ContactType.content",
+    "PersonCountryRegionData": "<*File*>TableContents/Person.CountryRegion.content",
+    "PersonPhoneNumberTypeData": "<*File*>TableContents/Person.PhoneNumberType.content",
+    "ProductionCultureData": "<*File*>TableContents/Production.Culture.content",
+    "ProductionLocationData": "<*File*>TableContents/Production.Location.content",
+    "ProductionProductCategoryData": "<*File*>TableContents/Production.ProductCategory.content",
+    "ProductionProductSubcategoryData": "<*File*>TableContents/Production.ProductSubcategory.content",
+    "ProductionScrapReasonData": "<*File*>TableContents/Production.ScrapReason.content",
+    "ProductionUnitMeasureData": "<*File*>TableContents/Production.UnitMeasure.content",
+    "PurchasingShipMethodData": "<*File*>TableContents/Purchasing.ShipMethod.content",
+    "SalesCurrencyData": "<*File*>TableContents/Sales.Currency.content",
+    "SalesCountryRegionCurrencyData": "<*File*>TableContents/Sales.CountryRegionCurrency.content",
+    "SalesSalesReasonData": "<*File*>TableContents/Sales.SalesReason.content"
+  },
+  "UpdateFillFactor": true
 }

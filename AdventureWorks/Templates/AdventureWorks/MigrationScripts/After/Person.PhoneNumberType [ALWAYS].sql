@@ -1,20 +1,4 @@
-DECLARE @data VARCHAR(MAX) = '[
-    {
-        "PhoneNumberTypeID": 1,
-        "Name": "Cell",
-        "ModifiedDate": "2017-12-13T13:19:22.273"
-    },
-    {
-        "PhoneNumberTypeID": 2,
-        "Name": "Home",
-        "ModifiedDate": "2017-12-13T13:19:22.273"
-    },
-    {
-        "PhoneNumberTypeID": 3,
-        "Name": "Work",
-        "ModifiedDate": "2017-12-13T13:19:22.273"
-    }
-]'
+DECLARE @data VARCHAR(MAX) = '{{PersonPhoneNumberTypeData}}'
 
 MERGE INTO Person.PhoneNumberType AS Target
 USING (

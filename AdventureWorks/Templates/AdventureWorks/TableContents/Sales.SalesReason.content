@@ -1,4 +1,4 @@
-DECLARE @data VARCHAR(MAX) = '[
+[
     {
         "SalesReasonID": 1,
         "Name": "Price",
@@ -59,26 +59,4 @@ DECLARE @data VARCHAR(MAX) = '[
         "ReasonType": "Other",
         "ModifiedDate": "2008-04-30T00:00:00"
     }
-]'
-
-MERGE INTO Sales.SalesReason AS Target
-USING (
-    SELECT *
-    FROM OPENJSON(@data)
-    WITH (
-        SalesReasonID int,
-        Name nvarchar(50),
-        ReasonType nvarchar(50),
-        ModifiedDate datetime
-    )
-) AS Source
-ON Target.SalesReasonID = Source.SalesReasonID
-WHEN MATCHED THEN
-    UPDATE SET
-        Name = Source.Name,
-        ReasonType = Source.ReasonType,
-        ModifiedDate = Source.ModifiedDate
-WHEN NOT MATCHED THEN
-    INSERT (Name, ReasonType, ModifiedDate)
-    VALUES (Source.Name, Source.ReasonType, Source.ModifiedDate);
-    
+]

@@ -1,4 +1,4 @@
-DECLARE @data VARCHAR(MAX) = '[
+[
     {
         "ProductSubcategoryID": 1,
         "ProductCategoryID": 1,
@@ -258,28 +258,4 @@ DECLARE @data VARCHAR(MAX) = '[
         "rowguid": "3C17C9AE-E906-48B4-BDD3-60E28D47DCDF",
         "ModifiedDate": "2008-04-30T00:00:00"
     }
-]'
-
-MERGE INTO Production.ProductSubcategory AS Target
-USING (
-    SELECT *
-    FROM OPENJSON(@data)
-    WITH (
-        ProductSubcategoryID int,
-        ProductCategoryID int,
-        Name nvarchar(50),
-        rowguid uniqueidentifier,
-        ModifiedDate datetime
-    )
-) AS Source
-ON Target.ProductSubcategoryID = Source.ProductSubcategoryID
-WHEN MATCHED THEN
-    UPDATE SET
-        ProductCategoryID = Source.ProductCategoryID,
-        Name = Source.Name,
-        rowguid = Source.rowguid,
-        ModifiedDate = Source.ModifiedDate
-WHEN NOT MATCHED THEN
-    INSERT (ProductCategoryID, Name, rowguid, ModifiedDate)
-    VALUES (Source.ProductCategoryID, Source.Name, Source.rowguid, Source.ModifiedDate);
-    
+]
