@@ -74,6 +74,7 @@
                         "type": "boolean"
                     },
                     "ExtendedProperties": {
+                        "description": "DICTIONARY",
                         "type": "object"
                     }
                 },
@@ -131,6 +132,7 @@
 						"type": "string"
 					},
                     "ExtendedProperties": {
+                        "description": "DICTIONARY",
                         "type": "object"
                     }
                 },
@@ -166,6 +168,7 @@
 						"type": "string"
 					},
                     "ExtendedProperties": {
+                        "description": "DICTIONARY",
                         "type": "object"
                     }
                 },
@@ -208,6 +211,7 @@
                         "pattern": "NO ACTION|CASCADE|SET NULL|SET DEFAULT"
                     },
                     "ExtendedProperties": {
+                        "description": "DICTIONARY",
                         "type": "object"
                     }
                 },
@@ -235,6 +239,7 @@
 						"type": "string"
 					},
                     "ExtendedProperties": {
+                        "description": "DICTIONARY",
                         "type": "object"
                     }
                 },
@@ -268,6 +273,7 @@
 						"type": "string"
 					},
                     "ExtendedProperties": {
+                        "description": "DICTIONARY",
                         "type": "object"
                     }
                 },
@@ -300,6 +306,7 @@
 					"type": "string"
 				},
                 "ExtendedProperties": {
+                    "description": "DICTIONARY",
                     "type": "object"
                 }
             },
@@ -311,6 +318,7 @@
             ]
         },
         "ExtendedProperties": {
+            "description": "DICTIONARY",
             "type": "object"
         }
     },
