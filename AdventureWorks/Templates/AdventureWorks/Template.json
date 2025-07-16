@@ -69,7 +69,8 @@
     "PurchasingShipMethodData": "<*File*>TableContents/Purchasing.ShipMethod.content",
     "SalesCurrencyData": "<*File*>TableContents/Sales.Currency.content",
     "SalesCountryRegionCurrencyData": "<*File*>TableContents/Sales.CountryRegionCurrency.content",
-    "SalesSalesReasonData": "<*File*>TableContents/Sales.SalesReason.content"
+    "SalesSalesReasonData": "<*File*>TableContents/Sales.SalesReason.content",
+    "dbo.DatabaseLogSchema": "<*File*>Tables/dbo.DatabaseLog.json"
   },
   "UpdateFillFactor": true
 }
