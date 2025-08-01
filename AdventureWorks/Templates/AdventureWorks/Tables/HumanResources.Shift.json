@@ -109,6 +109,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\HumanResources.Shift.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Work shift lookup table."
   }

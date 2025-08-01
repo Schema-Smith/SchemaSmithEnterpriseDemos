@@ -97,6 +97,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Sales.CountryRegionCurrency.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Cross-reference table mapping ISO currency codes to a country or region."
   }

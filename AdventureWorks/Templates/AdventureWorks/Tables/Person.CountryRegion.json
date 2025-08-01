@@ -71,6 +71,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Person.CountryRegion.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Lookup table containing the ISO standard codes for countries and regions."
   }

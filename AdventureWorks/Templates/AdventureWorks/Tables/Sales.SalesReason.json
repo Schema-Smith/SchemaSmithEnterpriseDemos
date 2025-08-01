@@ -69,6 +69,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Sales.SalesReason.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Lookup table of customer purchase reasons."
   }

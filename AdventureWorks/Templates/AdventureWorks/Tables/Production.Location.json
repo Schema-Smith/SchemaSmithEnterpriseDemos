@@ -99,6 +99,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Production.Location.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Product inventory and manufacturing locations."
   }
