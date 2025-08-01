@@ -1,6 +1,7 @@
 {
   "Name": "AdventureWorks",
   "DatabaseIdentificationScript": "SELECT [Name] FROM master.sys.databases WHERE [Name] = '{{AdventureWorksDb}}'",
+  "VersionStampScript": "",
   "IndexOnlyTableQuenches": false,
   "ScriptFolders": [
     {

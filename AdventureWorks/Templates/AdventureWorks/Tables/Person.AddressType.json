@@ -98,6 +98,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Person.AddressType.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Types of addresses stored in the Address table. "
   }

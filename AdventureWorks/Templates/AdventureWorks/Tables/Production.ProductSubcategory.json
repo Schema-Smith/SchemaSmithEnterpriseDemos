@@ -124,6 +124,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Production.ProductSubcategory.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Product subcategories. See ProductCategory table."
   }

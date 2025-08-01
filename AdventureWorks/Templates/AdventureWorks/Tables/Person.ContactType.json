@@ -71,6 +71,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Person.ContactType.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Lookup table containing the types of business entity contacts."
   }

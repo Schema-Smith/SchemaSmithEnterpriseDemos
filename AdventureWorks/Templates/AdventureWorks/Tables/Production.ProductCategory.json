@@ -98,6 +98,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Production.ProductCategory.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "High-level product categorization."
   }

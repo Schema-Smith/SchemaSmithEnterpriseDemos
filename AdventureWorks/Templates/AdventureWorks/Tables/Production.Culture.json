@@ -71,6 +71,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Production.Culture.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Lookup table containing the languages in which some AdventureWorks data is stored."
   }
