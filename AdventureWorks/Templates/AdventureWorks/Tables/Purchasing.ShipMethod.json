@@ -126,6 +126,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Purchasing.ShipMethod.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Shipping company lookup table."
   }

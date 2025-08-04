@@ -71,6 +71,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Production.ScrapReason.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Manufacturing failure reasons lookup table."
   }

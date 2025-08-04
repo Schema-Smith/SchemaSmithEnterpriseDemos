@@ -71,6 +71,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Sales.Currency.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Lookup table containing standard ISO currencies."
   }

@@ -71,6 +71,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\Production.UnitMeasure.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Unit of measure lookup table."
   }

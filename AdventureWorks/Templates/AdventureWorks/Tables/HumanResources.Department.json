@@ -83,6 +83,10 @@
       }
     }
   ],
+  "ContentFile": "TableContents\\HumanResources.Department.content",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Lookup table containing the departments within the Adventure Works Cycles company."
   }
