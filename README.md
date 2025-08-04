@@ -9,6 +9,7 @@ Each demo is self contained in one of the following subfolders
 | Demo           | Status |
 | -------------- | ------ |
 | ValidProduct   | Done |
+| Adventureworks | Done |
 
 ## Quick Start Guide
 
