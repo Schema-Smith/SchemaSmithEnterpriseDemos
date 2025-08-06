@@ -250,6 +250,7 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": true,
   "ExtendedProperties": {
     "MS_Description": "Individual products associated with a specific sales order. See SalesOrderHeader."
   }

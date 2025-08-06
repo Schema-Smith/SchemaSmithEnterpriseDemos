@@ -241,6 +241,7 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": true,
   "ExtendedProperties": {
     "MS_Description": "Manufacturing work orders."
   }
