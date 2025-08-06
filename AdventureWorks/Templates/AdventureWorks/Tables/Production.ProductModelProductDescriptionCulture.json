@@ -2,6 +2,7 @@
   "Schema": "[Production]",
   "Name": "[ProductModelProductDescriptionCulture]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[CultureID]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Culture identification number. Foreign key to Culture.CultureID."
       }
@@ -24,6 +27,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -36,6 +41,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to ProductDescription.ProductDescriptionID."
       }
@@ -48,6 +55,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to ProductModel.ProductModelID."
       }
@@ -64,11 +73,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[ProductModelID],[ProductDescriptionID],[CultureID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_ProductModelProductDescriptionCulture_Culture_CultureID]",
@@ -107,6 +118,16 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Production.ProductModelProductDescriptionCulture.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Cross-reference table mapping product descriptions and the language the description is written in."
   }

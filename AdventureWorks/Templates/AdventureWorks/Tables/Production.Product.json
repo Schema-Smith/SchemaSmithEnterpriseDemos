@@ -2,6 +2,7 @@
   "Schema": "[Production]",
   "Name": "[Product]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[Class]",
@@ -12,6 +13,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "H = High, M = Medium, L = Low"
       }
@@ -24,6 +27,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product color."
       }
@@ -37,6 +42,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Number of days required to manufacture the product."
       }
@@ -49,6 +56,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the product was discontinued."
       }
@@ -62,6 +71,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Product is not a salable item. 1 = Product is salable."
       }
@@ -75,6 +86,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Selling price."
       }
@@ -88,6 +101,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Product is purchased, 1 = Product is manufactured in-house."
       }
@@ -101,6 +116,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -113,6 +130,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Name of the product."
       }
@@ -125,6 +144,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Product records."
       }
@@ -138,6 +159,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "R = Road, M = Mountain, T = Touring, S = Standard"
       }
@@ -150,6 +173,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product is a member of this product model. Foreign key to ProductModel.ProductModelID."
       }
@@ -162,6 +187,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Unique product identification number."
       }
@@ -174,6 +201,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product is a member of this product subcategory. Foreign key to ProductSubCategory.ProductSubCategoryID. "
       }
@@ -187,6 +216,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Inventory level that triggers a purchase order or work order. "
       }
@@ -200,6 +231,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
       }
@@ -213,6 +246,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Minimum inventory quantity. "
       }
@@ -225,6 +260,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the product was no longer available for sale."
       }
@@ -237,6 +274,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the product was available for sale."
       }
@@ -249,6 +288,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product size."
       }
@@ -261,6 +302,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Unit of measure for Size column."
       }
@@ -274,6 +317,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Standard cost of the product."
       }
@@ -287,6 +332,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "W = Womens, M = Mens, U = Universal"
       }
@@ -300,6 +347,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product weight."
       }
@@ -312,6 +361,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Unit of measure for Weight column."
       }
@@ -328,6 +379,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[Name]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -342,6 +394,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[ProductNumber]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -356,6 +409,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support replication samples."
       }
@@ -370,11 +424,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[ProductID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_Product_ProductModel_ProductModelID]",
@@ -434,6 +490,15 @@
       }
     }
   ],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Production.Product.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Products sold or used in the manfacturing of sold products."
   }

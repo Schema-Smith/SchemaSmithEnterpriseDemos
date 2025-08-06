@@ -2,6 +2,7 @@
   "Schema": "[HumanResources]",
   "Name": "[JobCandidate]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[BusinessEntityID]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Employee identification number if applicant was hired. Foreign key to Employee.BusinessEntityID."
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for JobCandidate records."
       }
@@ -36,6 +41,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -48,6 +55,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Résumé in XML format."
       }
@@ -64,6 +73,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[BusinessEntityID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -78,11 +88,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[JobCandidateID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_JobCandidate_Employee_BusinessEntityID]",
@@ -97,12 +109,23 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
   "FullTextIndex": {
     "FullTextCatalog": "[AW2016FullTextCatalog]",
     "KeyIndex": "[PK_JobCandidate_JobCandidateID]",
     "ChangeTracking": "AUTO",
+    "StopList": "SYSTEM",
     "Columns": "[Resume]"
   },
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\HumanResources.JobCandidate.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Résumés submitted to Human Resources by job applicants."
   }

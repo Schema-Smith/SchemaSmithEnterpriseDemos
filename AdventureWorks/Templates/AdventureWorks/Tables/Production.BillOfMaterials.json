@@ -2,6 +2,7 @@
   "Schema": "[Production]",
   "Name": "[BillOfMaterials]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[BillOfMaterialsID]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for BillOfMaterials records."
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Indicates the depth the component is from its parent (AssemblyID)."
       }
@@ -35,6 +40,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Component identification number. Foreign key to Product.ProductID."
       }
@@ -47,6 +54,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the component stopped being used in the assembly item."
       }
@@ -60,6 +69,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -74,6 +85,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Quantity of the component needed to create the assembly."
       }
@@ -86,6 +99,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Parent product identification number. Foreign key to Product.ProductID."
       }
@@ -99,6 +114,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the component started being used in the assembly item."
       }
@@ -111,6 +128,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Standard code identifying the unit of measure for the quantity."
       }
@@ -127,6 +146,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[ProductAssemblyID],[ComponentID],[StartDate]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Clustered index."
       }
@@ -141,6 +161,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[UnitMeasureCode]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -155,11 +176,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[BillOfMaterialsID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Nonclustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_BillOfMaterials_Product_ComponentID]",
@@ -221,6 +244,15 @@
       }
     }
   ],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Production.BillOfMaterials.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Items required to make bicycles and bicycle subassemblies. It identifies the heirarchical relationship between a parent product and its components."
   }

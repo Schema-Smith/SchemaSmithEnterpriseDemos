@@ -2,6 +2,7 @@
   "Schema": "[Person]",
   "Name": "[BusinessEntityAddress]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[AddressID]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to Address.AddressID."
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to AddressType.AddressTypeID."
       }
@@ -35,6 +40,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to BusinessEntity.BusinessEntityID."
       }
@@ -48,6 +55,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -61,6 +70,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
       }
@@ -77,6 +88,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support replication samples."
       }
@@ -91,6 +103,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[AddressID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -105,6 +118,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[AddressTypeID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -119,11 +133,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[BusinessEntityID],[AddressID],[AddressTypeID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_BusinessEntityAddress_Address_AddressID]",
@@ -162,6 +178,16 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Person.BusinessEntityAddress.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Cross-reference table mapping customers, vendors, and employees to their addresses."
   }

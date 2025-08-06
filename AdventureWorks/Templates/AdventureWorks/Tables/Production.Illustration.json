@@ -2,6 +2,7 @@
   "Schema": "[Production]",
   "Name": "[Illustration]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[Diagram]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Illustrations used in manufacturing instructions. Stored as XML."
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Illustration records."
       }
@@ -36,6 +41,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -52,11 +59,24 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[IllustrationID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
+  "ForeignKeys": [],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Production.Illustration.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Bicycle assembly diagrams."
   }

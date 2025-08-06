@@ -2,6 +2,7 @@
   "Schema": "[Sales]",
   "Name": "[SalesOrderHeader]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[AccountNumber]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Financial accounting number reference."
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Customer billing address. Foreign key to Address.AddressID."
       }
@@ -35,6 +40,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Sales representative comments."
       }
@@ -47,6 +54,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Approval code provided by the credit card company."
       }
@@ -59,6 +68,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Credit card identification number. Foreign key to CreditCard.CreditCardID."
       }
@@ -71,6 +82,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Currency exchange rate used. Foreign key to CurrencyRate.CurrencyRateID."
       }
@@ -83,6 +96,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Customer identification number. Foreign key to Customer.BusinessEntityID."
       }
@@ -95,6 +110,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the order is due to the customer."
       }
@@ -109,6 +126,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Shipping cost."
       }
@@ -122,6 +141,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -135,6 +156,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Order placed by sales person. 1 = Order placed online by customer."
       }
@@ -148,6 +171,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Dates the sales order was created."
       }
@@ -160,6 +185,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Customer purchase order number reference. "
       }
@@ -173,6 +200,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Incremental number to track changes to the sales order over time."
       }
@@ -186,6 +215,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
       }
@@ -198,6 +229,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key."
       }
@@ -211,6 +244,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Unique sales order identification number."
       }
@@ -223,6 +258,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Sales person who created the sales order. Foreign key to SalesPerson.BusinessEntityID."
       }
@@ -235,6 +272,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date the order was shipped to the customer."
       }
@@ -247,6 +286,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Shipping method. Foreign key to ShipMethod.ShipMethodID."
       }
@@ -259,6 +300,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Customer shipping address. Foreign key to Address.AddressID."
       }
@@ -273,6 +316,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled"
       }
@@ -287,6 +332,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Sales subtotal. Computed as SUM(SalesOrderDetail.LineTotal)for the appropriate SalesOrderID."
       }
@@ -301,6 +348,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Tax amount."
       }
@@ -313,6 +362,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Territory in which the sale was made. Foreign key to SalesTerritory.SalesTerritoryID."
       }
@@ -326,6 +377,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Total due from customer. Computed as Subtotal + TaxAmt + Freight."
       }
@@ -342,6 +395,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support replication samples."
       }
@@ -356,6 +410,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[SalesOrderNumber]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -370,6 +425,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[CustomerID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -384,6 +440,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[SalesPersonID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -398,11 +455,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[SalesOrderID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_SalesOrderHeader_Address_BillToAddressID]",
@@ -517,6 +576,15 @@
       }
     }
   ],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Sales.SalesOrderHeader.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "General sales order information."
   }

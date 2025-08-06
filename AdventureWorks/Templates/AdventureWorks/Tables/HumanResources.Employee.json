@@ -2,6 +2,7 @@
   "Schema": "[HumanResources]",
   "Name": "[Employee]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[BirthDate]",
@@ -12,6 +13,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date of birth."
       }
@@ -24,6 +27,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Employee records.  Foreign key to BusinessEntity.BusinessEntityID."
       }
@@ -37,6 +42,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Inactive, 1 = Active"
       }
@@ -50,6 +57,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "M = Male, F = Female"
       }
@@ -63,6 +72,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Employee hired on this date."
       }
@@ -75,6 +86,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Work title such as Buyer or Sales Representative."
       }
@@ -87,6 +100,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Network login."
       }
@@ -100,6 +115,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "M = Married, S = Single"
       }
@@ -113,6 +130,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -125,6 +144,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Unique national identification number such as a social security number."
       }
@@ -138,6 +159,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "The depth of the employee in the corporate hierarchy."
       }
@@ -150,6 +173,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Where the employee is located in corporate hierarchy."
       }
@@ -163,6 +188,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
       }
@@ -176,6 +203,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Job classification. 0 = Hourly, not exempt from collective bargaining. 1 = Salaried, exempt from collective bargaining."
       }
@@ -190,6 +219,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Number of available sick leave hours."
       }
@@ -204,6 +235,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Number of available vacation hours."
       }
@@ -220,6 +253,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[LoginID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -234,6 +268,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[NationalIDNumber]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -248,6 +283,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support replication samples."
       }
@@ -262,6 +298,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[OrganizationLevel],[OrganizationNode]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -276,6 +313,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[OrganizationNode]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -290,11 +328,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[BusinessEntityID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_Employee_Person_BusinessEntityID]",
@@ -309,6 +349,16 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\HumanResources.Employee.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Employee information such as salary, department, and title."
   }

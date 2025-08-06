@@ -2,6 +2,7 @@
   "Schema": "[Production]",
   "Name": "[Document]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[ChangeNumber]",
@@ -12,6 +13,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Engineering change approval number."
       }
@@ -24,6 +27,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Complete document."
       }
@@ -37,6 +42,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Depth in the document hierarchy."
       }
@@ -49,6 +56,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Document records."
       }
@@ -61,6 +70,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Document abstract."
       }
@@ -73,6 +84,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "File extension indicating the document type. For example, .doc or .txt."
       }
@@ -85,6 +98,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "File name of the document"
       }
@@ -98,6 +113,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = This is a folder, 1 = This is a document."
       }
@@ -111,6 +128,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -123,6 +142,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Employee who controls the document.  Foreign key to Employee.BusinessEntityID"
       }
@@ -135,6 +156,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Revision number of the document. "
       }
@@ -148,6 +171,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Required for FileStream."
       }
@@ -161,6 +186,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "1 = Pending approval, 2 = Approved, 3 = Obsolete"
       }
@@ -173,6 +200,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Title of the document."
       }
@@ -189,6 +218,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[DocumentLevel],[DocumentNode]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -203,6 +233,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support FileStream."
       }
@@ -217,6 +248,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[FileName],[Revision]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -231,6 +263,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[DocumentNode]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -244,9 +277,11 @@
       "Clustered": false,
       "ColumnStore": false,
       "FillFactor": 0,
-      "IndexColumns": "[rowguid]"
+      "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_Document_Employee_Owner]",
@@ -261,12 +296,23 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
   "FullTextIndex": {
     "FullTextCatalog": "[AW2016FullTextCatalog]",
     "KeyIndex": "[PK_Document_DocumentNode]",
     "ChangeTracking": "AUTO",
+    "StopList": "SYSTEM",
     "Columns": "[Document] TYPE COLUMN [FileExtension],[DocumentSummary]"
   },
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Production.Document.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Product maintenance documents."
   }

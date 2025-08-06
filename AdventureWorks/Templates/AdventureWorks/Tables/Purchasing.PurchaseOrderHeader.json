@@ -2,6 +2,7 @@
   "Schema": "[Purchasing]",
   "Name": "[PurchaseOrderHeader]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[EmployeeID]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Employee who created the purchase order. Foreign key to Employee.BusinessEntityID."
       }
@@ -25,6 +28,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Shipping cost."
       }
@@ -38,6 +43,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -51,6 +58,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Purchase order creation date."
       }
@@ -63,6 +72,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key."
       }
@@ -76,6 +87,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Incremental number to track changes to the purchase order over time."
       }
@@ -88,6 +101,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Estimated shipment date from the vendor."
       }
@@ -100,6 +115,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Shipping method. Foreign key to ShipMethod.ShipMethodID."
       }
@@ -114,6 +131,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 = Complete"
       }
@@ -128,6 +147,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Purchase order subtotal. Computed as SUM(PurchaseOrderDetail.LineTotal)for the appropriate PurchaseOrderID."
       }
@@ -142,6 +163,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Tax amount."
       }
@@ -155,6 +178,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Total due to vendor. Computed as Subtotal + TaxAmt + Freight."
       }
@@ -167,6 +192,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Vendor with whom the purchase order is placed. Foreign key to Vendor.BusinessEntityID."
       }
@@ -183,6 +210,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[EmployeeID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -197,6 +225,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[VendorID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -211,11 +240,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[PurchaseOrderID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_PurchaseOrderHeader_Employee_EmployeeID]",
@@ -263,6 +294,15 @@
       }
     }
   ],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Purchasing.PurchaseOrderHeader.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "General purchase order information. See PurchaseOrderDetail."
   }

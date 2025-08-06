@@ -2,6 +2,7 @@
   "Schema": "[Person]",
   "Name": "[Person]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[AdditionalContactInfo]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Additional contact information about the person stored in xml format. "
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Person records."
       }
@@ -35,6 +40,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Personal information such as hobbies, and income collected from online shoppers. Used for sales analysis."
       }
@@ -49,6 +56,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners. "
       }
@@ -61,6 +70,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "First name of the person."
       }
@@ -73,6 +84,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Last name of the person."
       }
@@ -85,6 +98,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Middle name or middle initial of the person."
       }
@@ -98,6 +113,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -111,6 +128,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order."
       }
@@ -124,6 +143,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary type of person: SC = Store Contact, IN = Individual (retail) customer, SP = Sales person, EM = Employee (non-sales), VC = Vendor contact, GC = General contact"
       }
@@ -137,6 +158,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
       }
@@ -149,6 +172,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Surname suffix. For example, Sr. or Jr."
       }
@@ -161,6 +186,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "A courtesy title. For example, Mr. or Ms."
       }
@@ -177,6 +204,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support replication samples."
       }
@@ -190,7 +218,8 @@
       "Clustered": false,
       "ColumnStore": false,
       "FillFactor": 0,
-      "IndexColumns": "[LastName],[FirstName],[MiddleName]"
+      "IndexColumns": "[LastName],[FirstName],[MiddleName]",
+      "UpdateFillFactor": false
     },
     {
       "Name": "[PK_Person_BusinessEntityID]",
@@ -202,6 +231,7 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[BusinessEntityID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -210,24 +240,24 @@
   "XmlIndexes": [
     {
       "Name": "[PXML_Person_AddContact]",
-      "Column": "[AdditionalContactInfo]",
       "IsPrimary": true,
+      "Column": "[AdditionalContactInfo]",
       "ExtendedProperties": {
         "MS_Description": "Primary XML index."
       }
     },
     {
       "Name": "[PXML_Person_Demographics]",
-      "Column": "[Demographics]",
       "IsPrimary": true,
+      "Column": "[Demographics]",
       "ExtendedProperties": {
         "MS_Description": "Primary XML index."
       }
     },
     {
       "Name": "[XMLPATH_Person_Demographics]",
-      "Column": "[Demographics]",
       "IsPrimary": false,
+      "Column": "[Demographics]",
       "PrimaryIndex": "[PXML_Person_Demographics]",
       "SecondaryIndexType": "PATH",
       "ExtendedProperties": {
@@ -236,8 +266,8 @@
     },
     {
       "Name": "[XMLPROPERTY_Person_Demographics]",
-      "Column": "[Demographics]",
       "IsPrimary": false,
+      "Column": "[Demographics]",
       "PrimaryIndex": "[PXML_Person_Demographics]",
       "SecondaryIndexType": "PROPERTY",
       "ExtendedProperties": {
@@ -246,8 +276,8 @@
     },
     {
       "Name": "[XMLVALUE_Person_Demographics]",
-      "Column": "[Demographics]",
       "IsPrimary": false,
+      "Column": "[Demographics]",
       "PrimaryIndex": "[PXML_Person_Demographics]",
       "SecondaryIndexType": "VALUE",
       "ExtendedProperties": {
@@ -269,6 +299,16 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Person.Person.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Human beings involved with AdventureWorks: employees, customer contacts, and vendor contacts."
   }

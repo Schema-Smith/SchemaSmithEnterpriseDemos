@@ -2,6 +2,7 @@
   "Schema": "[Production]",
   "Name": "[ProductReview]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[Comments]",
@@ -11,6 +12,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Reviewer's comments"
       }
@@ -23,6 +26,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Reviewer's e-mail address."
       }
@@ -36,6 +41,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -48,6 +55,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product identification number. Foreign key to Product.ProductID."
       }
@@ -60,6 +69,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for ProductReview records."
       }
@@ -73,6 +84,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Product rating given by the reviewer. Scale is 1 to 5 with 5 as the highest rating."
       }
@@ -86,6 +99,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Date review was submitted."
       }
@@ -98,6 +113,8 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EnableCDC": false,
       "ExtendedProperties": {
         "MS_Description": "Name of the reviewer."
       }
@@ -115,6 +132,7 @@
       "FillFactor": 0,
       "IndexColumns": "[ProductID],[ReviewerName]",
       "IncludeColumns": "[Comments]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -129,11 +147,13 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[ProductReviewID]",
+      "UpdateFillFactor": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
   "ForeignKeys": [
     {
       "Name": "[FK_ProductReview_Product_ProductID]",
@@ -148,12 +168,23 @@
       }
     }
   ],
+  "CheckConstraints": [],
+  "Statistics": [],
   "FullTextIndex": {
     "FullTextCatalog": "[AW2016FullTextCatalog]",
     "KeyIndex": "[PK_ProductReview_ProductReviewID]",
     "ChangeTracking": "AUTO",
+    "StopList": "SYSTEM",
     "Columns": "[Comments]"
   },
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
+  "ContentFile": "TableContents\\Production.ProductReview.tabledata",
+  "MergeType": "Insert/Update",
+  "MatchColumns": "",
+  "MergeFilter": "",
   "ExtendedProperties": {
     "MS_Description": "Customer reviews of products they have purchased."
   }
