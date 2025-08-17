@@ -1,0 +1,53 @@
+{
+	"MenuType": "ContextMenu",
+	"MenuItems":[
+		{
+			"Name":"Show File History",
+			"Executable":"C:\\Program Files\\GitExtensions\\GitExtensions.exe",
+			"CommandLineOptions":"filehistory \"<filename>\"",
+			"CaptureStandardOutput":false,
+			"WaitForExit":false,
+			"SuppressCmdWindow":false
+		},
+		{
+			"Name":"Diff File",
+			"Executable":"git",
+			"CommandLineOptions":"difftool \"<filename.*>\" -y",
+			"CaptureStandardOutput":false,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Diff Files in Folder",
+			"Executable":"git",
+			"CommandLineOptions":"difftool \"<directory>\" -y",
+			"CaptureStandardOutput":false,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Stage Changes and Untracked Files",
+			"Executable":"git",
+			"CommandLineOptions":"add -A \"<directory>\"",
+			"CaptureStandardOutput":false,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Revert File Changes",
+			"Executable":"git",
+			"CommandLineOptions":"checkout \"<filename.*>\"",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Command Prompt Here",
+			"Executable":"C:\\windows\\system32\\cmd.exe",
+			"CommandLineOptions":"/K \"cd <directory>\"",
+			"CaptureStandardOutput":false,
+			"WaitForExit":false,
+			"SuppressCmdWindow":false
+		}
+	]
+}

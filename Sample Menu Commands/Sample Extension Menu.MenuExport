@@ -1,0 +1,69 @@
+{
+	"MenuType": "ExtensionMenu",
+	"MenuItems":[
+		{
+			"Name":"Checkout Branch",
+			"Executable":"git",
+			"CommandLineOptions":"checkout <?Branch Name?>",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Pull Latest Code",
+			"Executable":"git",
+			"CommandLineOptions":"pull",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Check Status of Changes",
+			"Executable":"git",
+			"CommandLineOptions":"status",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Commit Changes",
+			"Executable":"git",
+			"CommandLineOptions":"commit -am\"<?Commit Message?>\"",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Push Changes to Remote",
+			"Executable":"git",
+			"CommandLineOptions":"push",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Get Branch List",
+			"Executable":"git",
+			"CommandLineOptions":"branch",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Get Remote Branch List",
+			"Executable":"git",
+			"CommandLineOptions":"branch -r",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		},
+		{
+			"Name":"Delete Local Branch",
+			"Executable":"git",
+			"CommandLineOptions":"branch -D <?Branch Name?>",
+			"CaptureStandardOutput":true,
+			"WaitForExit":true,
+			"SuppressCmdWindow":true
+		}
+	]
+}
