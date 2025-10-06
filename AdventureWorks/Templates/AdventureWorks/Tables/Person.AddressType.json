@@ -98,7 +98,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Person.AddressType.content",
+  "ContentFile": "TableContents/Person.AddressType.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

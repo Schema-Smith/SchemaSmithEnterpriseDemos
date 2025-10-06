@@ -163,7 +163,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.ProductModel.tabledata",
+  "ContentFile": "TableContents/Production.ProductModel.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

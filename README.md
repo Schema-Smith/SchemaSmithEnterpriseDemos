@@ -10,6 +10,7 @@ Each demo is self contained in one of the following subfolders
 | -------------- | ------ |
 | ValidProduct   | Done |
 | Adventureworks | Done |
+| Northwind      | Done |
 
 ## Quick Start Guide
 

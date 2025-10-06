@@ -164,7 +164,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.SalesTerritoryHistory.tabledata",
+  "ContentFile": "TableContents/Sales.SalesTerritoryHistory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

@@ -123,7 +123,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.ProductCostHistory.tabledata",
+  "ContentFile": "TableContents/Production.ProductCostHistory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

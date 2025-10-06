@@ -203,7 +203,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.TransactionHistory.tabledata",
+  "ContentFile": "TableContents/Production.TransactionHistory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

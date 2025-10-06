@@ -158,7 +158,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.ProductInventory.tabledata",
+  "ContentFile": "TableContents/Production.ProductInventory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

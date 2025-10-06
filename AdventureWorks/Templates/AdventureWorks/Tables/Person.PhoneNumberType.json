@@ -57,7 +57,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Person.PhoneNumberType.content",
+  "ContentFile": "TableContents/Person.PhoneNumberType.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

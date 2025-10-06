@@ -98,7 +98,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.ProductDocument.tabledata",
+  "ContentFile": "TableContents/Production.ProductDocument.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

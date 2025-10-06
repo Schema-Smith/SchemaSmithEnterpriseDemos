@@ -71,7 +71,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Person.CountryRegion.content",
+  "ContentFile": "TableContents/Person.CountryRegion.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

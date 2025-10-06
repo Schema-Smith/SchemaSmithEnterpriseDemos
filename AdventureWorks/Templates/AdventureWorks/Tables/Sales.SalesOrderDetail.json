@@ -246,7 +246,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.SalesOrderDetail.tabledata",
+  "ContentFile": "TableContents/Sales.SalesOrderDetail.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

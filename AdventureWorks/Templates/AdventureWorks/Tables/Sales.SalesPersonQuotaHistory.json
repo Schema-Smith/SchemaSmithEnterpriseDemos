@@ -131,7 +131,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.SalesPersonQuotaHistory.tabledata",
+  "ContentFile": "TableContents/Sales.SalesPersonQuotaHistory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

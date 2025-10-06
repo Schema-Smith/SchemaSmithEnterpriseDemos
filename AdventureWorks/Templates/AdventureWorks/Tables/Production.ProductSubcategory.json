@@ -124,7 +124,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Production.ProductSubcategory.content",
+  "ContentFile": "TableContents/Production.ProductSubcategory.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

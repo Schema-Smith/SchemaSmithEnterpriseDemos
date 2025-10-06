@@ -89,7 +89,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Person.BusinessEntity.tabledata",
+  "ContentFile": "TableContents/Person.BusinessEntity.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

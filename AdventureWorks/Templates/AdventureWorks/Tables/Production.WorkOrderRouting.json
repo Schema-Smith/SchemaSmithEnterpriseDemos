@@ -257,7 +257,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.WorkOrderRouting.tabledata",
+  "ContentFile": "TableContents/Production.WorkOrderRouting.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

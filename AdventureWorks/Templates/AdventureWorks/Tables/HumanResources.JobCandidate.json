@@ -122,7 +122,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\HumanResources.JobCandidate.tabledata",
+  "ContentFile": "TableContents/HumanResources.JobCandidate.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

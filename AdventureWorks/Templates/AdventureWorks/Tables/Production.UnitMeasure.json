@@ -71,7 +71,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Production.UnitMeasure.content",
+  "ContentFile": "TableContents/Production.UnitMeasure.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

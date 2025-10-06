@@ -169,7 +169,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.CurrencyRate.tabledata",
+  "ContentFile": "TableContents/Sales.CurrencyRate.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

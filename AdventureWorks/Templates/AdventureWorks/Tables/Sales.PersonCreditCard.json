@@ -98,7 +98,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.PersonCreditCard.tabledata",
+  "ContentFile": "TableContents/Sales.PersonCreditCard.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

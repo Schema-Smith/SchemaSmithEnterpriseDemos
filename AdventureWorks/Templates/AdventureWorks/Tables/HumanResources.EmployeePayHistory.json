@@ -116,7 +116,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\HumanResources.EmployeePayHistory.tabledata",
+  "ContentFile": "TableContents/HumanResources.EmployeePayHistory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

@@ -127,7 +127,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Person.PersonPhone.tabledata",
+  "ContentFile": "TableContents/Person.PersonPhone.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

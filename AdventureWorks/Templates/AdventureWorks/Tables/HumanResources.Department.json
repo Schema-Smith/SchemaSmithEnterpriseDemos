@@ -83,7 +83,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\HumanResources.Department.content",
+  "ContentFile": "TableContents/HumanResources.Department.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

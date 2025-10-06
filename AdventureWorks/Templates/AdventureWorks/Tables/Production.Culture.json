@@ -71,7 +71,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Production.Culture.content",
+  "ContentFile": "TableContents/Production.Culture.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

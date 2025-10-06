@@ -214,7 +214,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.SpecialOffer.tabledata",
+  "ContentFile": "TableContents/Sales.SpecialOffer.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

@@ -249,7 +249,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.BillOfMaterials.tabledata",
+  "ContentFile": "TableContents/Production.BillOfMaterials.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
