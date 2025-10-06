@@ -355,7 +355,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\HumanResources.Employee.tabledata",
+  "ContentFile": "TableContents/HumanResources.Employee.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

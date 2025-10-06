@@ -1,0 +1,11 @@
+{
+  "Name": "Northwind",
+  "DatabaseIdentificationScript": "SELECT [Name] FROM master.sys.databases WHERE [Name] = '{{NorthwindDb}}'",
+  "VersionStampScript": "",
+  "IndexOnlyTableQuenches": false,
+  "ScriptFolders": [],
+  "ServerToQuench": "Primary",
+  "ScriptTokens": {},
+  "UpdateFillFactor": true,
+  "BaselineValidationScript": ""
+}

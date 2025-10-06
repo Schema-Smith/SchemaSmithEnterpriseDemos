@@ -99,7 +99,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Production.Location.content",
+  "ContentFile": "TableContents/Production.Location.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

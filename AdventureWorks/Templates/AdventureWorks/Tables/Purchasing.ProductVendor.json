@@ -258,7 +258,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Purchasing.ProductVendor.tabledata",
+  "ContentFile": "TableContents/Purchasing.ProductVendor.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

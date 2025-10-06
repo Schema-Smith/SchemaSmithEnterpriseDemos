@@ -146,7 +146,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.ShoppingCartItem.tabledata",
+  "ContentFile": "TableContents/Sales.ShoppingCartItem.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

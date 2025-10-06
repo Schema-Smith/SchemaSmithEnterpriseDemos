@@ -190,7 +190,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\HumanResources.EmployeeDepartmentHistory.tabledata",
+  "ContentFile": "TableContents/HumanResources.EmployeeDepartmentHistory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

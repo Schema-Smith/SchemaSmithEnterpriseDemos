@@ -71,7 +71,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Sales.Currency.content",
+  "ContentFile": "TableContents/Sales.Currency.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

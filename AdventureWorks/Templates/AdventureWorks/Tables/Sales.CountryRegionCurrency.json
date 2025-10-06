@@ -97,7 +97,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Sales.CountryRegionCurrency.content",
+  "ContentFile": "TableContents/Sales.CountryRegionCurrency.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

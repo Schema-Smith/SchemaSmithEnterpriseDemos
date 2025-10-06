@@ -175,7 +175,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.SalesTaxRate.tabledata",
+  "ContentFile": "TableContents/Sales.SalesTaxRate.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

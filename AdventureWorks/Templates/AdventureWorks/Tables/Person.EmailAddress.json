@@ -130,7 +130,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Person.EmailAddress.tabledata",
+  "ContentFile": "TableContents/Person.EmailAddress.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

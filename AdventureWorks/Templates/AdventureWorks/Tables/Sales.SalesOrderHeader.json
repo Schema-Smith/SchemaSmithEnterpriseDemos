@@ -581,7 +581,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Sales.SalesOrderHeader.tabledata",
+  "ContentFile": "TableContents/Sales.SalesOrderHeader.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

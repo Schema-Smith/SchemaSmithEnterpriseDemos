@@ -126,7 +126,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents\\Purchasing.ShipMethod.content",
+  "ContentFile": "TableContents/Purchasing.ShipMethod.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

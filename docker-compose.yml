@@ -2,10 +2,10 @@ services:
   quench-validproduct:
     image: schemasmithyfree/schemaquenchenterprisedemo:latest
     environment:
-      - QuenchSettings_Target__Server=demoserver
-      - QuenchSettings_Target__User=${MSSQL_SA_USERNAME}
-      - QuenchSettings_Target__Password=${MSSQL_SA_PASSWORD}
-      - QuenchSettings_SchemaPackagePath=/metadata
+      - SmithySettings_Target__Server=demoserver
+      - SmithySettings_Target__User=${MSSQL_SA_USERNAME}
+      - SmithySettings_Target__Password=${MSSQL_SA_PASSWORD}
+      - SmithySettings_SchemaPackagePath=/metadata
     volumes:
       - ./ValidProduct:/metadata
     depends_on:
@@ -15,12 +15,25 @@ services:
   quench-adventureworks:
     image: schemasmithyfree/schemaquenchenterprisedemo:latest
     environment:
-      - QuenchSettings_Target__Server=demoserver
-      - QuenchSettings_Target__User=${MSSQL_SA_USERNAME}
-      - QuenchSettings_Target__Password=${MSSQL_SA_PASSWORD}
-      - QuenchSettings_SchemaPackagePath=/metadata
+      - SmithySettings_Target__Server=demoserver
+      - SmithySettings_Target__User=${MSSQL_SA_USERNAME}
+      - SmithySettings_Target__Password=${MSSQL_SA_PASSWORD}
+      - SmithySettings_SchemaPackagePath=/metadata
     volumes:
       - ./AdventureWorks:/metadata
+    depends_on:
+      demoserver:
+        condition: service_healthy
+
+  quench-northwind:
+    image: schemasmithyfree/schemaquenchenterprisedemo:latest
+    environment:
+      - SmithySettings_Target__Server=demoserver
+      - SmithySettings_Target__User=${MSSQL_SA_USERNAME}
+      - SmithySettings_Target__Password=${MSSQL_SA_PASSWORD}
+      - SmithySettings_SchemaPackagePath=/metadata
+    volumes:
+      - ./Northwind:/metadata
     depends_on:
       demoserver:
         condition: service_healthy
@@ -53,4 +66,6 @@ services:
       quench-validproduct:
         condition: service_completed_successfully
       quench-adventureworks:
+        condition: service_completed_successfully
+      quench-northwind:
         condition: service_completed_successfully

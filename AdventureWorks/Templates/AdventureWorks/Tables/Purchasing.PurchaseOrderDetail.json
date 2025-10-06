@@ -231,7 +231,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Purchasing.PurchaseOrderDetail.tabledata",
+  "ContentFile": "TableContents/Purchasing.PurchaseOrderDetail.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

@@ -1,0 +1,17 @@
+{
+  "Name": "Northwind",
+  "ValidationScript": "SELECT CAST(CASE WHEN EXISTS(SELECT * FROM master.sys.databases WHERE [Name] = '{{NorthwindDb}}') THEN 1 ELSE 0 END AS BIT)",
+  "TemplateOrder": [
+    "Northwind"
+  ],
+  "ScriptTokens": {
+    "NorthwindDb": "Northwind"
+  },
+  "ScriptFolders": [],
+  "BranchNameFile": "{{repo_path}}\\.git\\HEAD",
+  "BeforeBranchNameMask": "ref: refs/heads/",
+  "AfterBranchNameMask": "",
+  "DropUnknownIndexes": false,
+  "BaselineValidationScript": "",
+  "VersionStampScript": ""
+}

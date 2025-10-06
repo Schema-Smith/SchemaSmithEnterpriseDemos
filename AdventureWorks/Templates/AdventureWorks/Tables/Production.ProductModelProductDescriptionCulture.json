@@ -124,7 +124,7 @@
   "ShouldApplyExpression": "",
   "EnableCDC": false,
   "EnableCDCAllColumns": false,
-  "ContentFile": "TableContents\\Production.ProductModelProductDescriptionCulture.tabledata",
+  "ContentFile": "TableContents/Production.ProductModelProductDescriptionCulture.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
