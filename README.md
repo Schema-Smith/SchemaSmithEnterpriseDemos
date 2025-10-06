@@ -17,6 +17,7 @@ Each demo has an associated docker service associated with it.  To deploy the fu
 
 ```bash
 docker compose pull
+docker compose build
 docker compose up
 ```
 
