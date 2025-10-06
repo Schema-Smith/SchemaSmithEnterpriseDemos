@@ -16,7 +16,7 @@ Each demo is self contained in one of the following subfolders
 Each demo has an associated docker service associated with it.  To deploy the full stack on windows or mac run the following from the root of the repository:
 
 ```bash
-docker compose build
+docker compose pull
 docker compose up
 ```
 
