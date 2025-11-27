@@ -13,5 +13,6 @@
   "AfterBranchNameMask": "",
   "DropUnknownIndexes": false,
   "BaselineValidationScript": "",
-  "VersionStampScript": ""
+  "VersionStampScript": "",
+  "Platform": "MSSQL"
 }
