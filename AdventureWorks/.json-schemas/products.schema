@@ -57,6 +57,9 @@
         },
         "BaselineValidationScript": {
             "type": "string"
+        },
+        "Platform": {
+            "type": "string"
         }
     },
   "additionalProperties": false,
