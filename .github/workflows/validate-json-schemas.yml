@@ -1,0 +1,36 @@
+name: json-yaml-validate
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write # enable write permissions for pull request comments
+
+jobs:
+  json-yaml-validate-adventureworks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: json-yaml-validate-adventureworks
+        id: json-yaml-validate-adventureworks
+        uses: GrantBirki/json-yaml-validate@v2.6.0
+        with:
+          comment: "true" # enable comment mode
+          use_gitignore: "false"
+          json_schema: "./AdventureWorks/.json-schemas/tables.schema"
+          base_dir: "./AdventureWorks/Templates/AdventureWorks/Tables"
+
+  json-yaml-validate-northwind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: json-yaml-validate-northwind
+        id: json-yaml-validate-northwind
+        uses: GrantBirki/json-yaml-validate@v2.6.0
+        with:
+          comment: "true" # enable comment mode
+          use_gitignore: "false"
+          json_schema: "./Northwind/.json-schemas/tables.schema"
+          base_dir: "./Northwind/Templates/Northwind/Tables"

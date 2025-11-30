@@ -35,8 +35,14 @@
         "MergeFilter": {
             "type": "string"
         },
+        "MergeDisableTriggers": {
+            "type": "boolean"
+        },
         "OldName": {
             "type": "string"
+        },
+        "EnableCDCAllColumns": {
+            "type": "boolean"
         },
         "Columns": {
             "type": "array",
