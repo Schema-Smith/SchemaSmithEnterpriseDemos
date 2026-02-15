@@ -3,9 +3,28 @@
   "DatabaseIdentificationScript": "SELECT [Name] FROM master.sys.databases WHERE [Name] = '{{NorthwindDb}}'",
   "VersionStampScript": "",
   "IndexOnlyTableQuenches": false,
-  "ScriptFolders": [],
+  "ScriptFolders": [
+    {
+      "FolderPath": "Before Scripts",
+      "QuenchSlot": "Before"
+    },
+    {
+      "FolderPath": "Schemas",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Procedures",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Views",
+      "QuenchSlot": "Objects"
+    }
+  ],
   "ServerToQuench": "Primary",
-  "ScriptTokens": {},
+  "ScriptTokens": {
+    "recyclebin.RegistrySchema": "<*SpecificTable*>recyclebin.Registry"
+  },
   "UpdateFillFactor": true,
   "BaselineValidationScript": ""
 }
