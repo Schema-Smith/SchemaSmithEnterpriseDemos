@@ -24,4 +24,4 @@ docker compose up
 
 ## Additional Resources
 
-Checkout our [wiki](https://github.com/Schema-Smith/SchemaSmithEnterpriseDemos/wiki) for documentation about how these tools work to make deploying sql server schema effortless.
+Checkout our [website](https://schemasmith.com/documentation/mssql/enterprise/getting-started.html) for documentation about how these tools work to make deploying sql server schema effortless.
