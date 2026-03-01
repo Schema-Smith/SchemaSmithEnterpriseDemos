@@ -13,7 +13,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Shipment tracking number supplied by the shipper."
       }
@@ -28,7 +33,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty."
       }
@@ -43,7 +53,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -58,7 +73,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Quantity ordered per product."
       }
@@ -72,7 +92,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Product sold to customer. Foreign key to Product.ProductID."
       }
@@ -87,7 +112,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample."
       }
@@ -101,7 +131,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. One incremental unique number per product sold."
       }
@@ -115,7 +150,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to SalesOrderHeader.SalesOrderID."
       }
@@ -129,7 +169,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Promotional code. Foreign key to SpecialOffer.SpecialOfferID."
       }
@@ -144,7 +189,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Selling price of a single product."
       }
@@ -160,7 +210,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Discount amount."
       }
@@ -178,6 +233,7 @@
       "FillFactor": 0,
       "IndexColumns": "[rowguid]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index. Used to support replication samples."
       }
@@ -193,6 +249,7 @@
       "FillFactor": 0,
       "IndexColumns": "[ProductID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -208,6 +265,7 @@
       "FillFactor": 0,
       "IndexColumns": "[SalesOrderID],[SalesOrderDetailID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -221,6 +279,7 @@
       "RelatedTableSchema": "[Sales]",
       "RelatedTable": "[SalesOrderHeader]",
       "RelatedColumns": "[SalesOrderID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "CASCADE",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -233,6 +292,7 @@
       "RelatedTableSchema": "[Sales]",
       "RelatedTable": "[SpecialOfferProduct]",
       "RelatedColumns": "[SpecialOfferID],[ProductID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -251,6 +311,8 @@
   "MatchColumns": "",
   "MergeFilter": "",
   "MergeDisableTriggers": true,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Individual products associated with a specific sales order. See SalesOrderHeader."
   }

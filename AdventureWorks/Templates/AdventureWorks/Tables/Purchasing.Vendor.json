@@ -13,7 +13,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Vendor account (identification) number."
       }
@@ -28,7 +33,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Vendor no longer used. 1 = Vendor is actively used."
       }
@@ -42,7 +52,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Vendor records.  Foreign key to BusinessEntity.BusinessEntityID"
       }
@@ -57,7 +72,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "1 = Superior, 2 = Excellent, 3 = Above average, 4 = Average, 5 = Below average"
       }
@@ -72,7 +92,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -86,7 +111,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Company name."
       }
@@ -101,7 +131,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "0 = Do not use if another vendor is available. 1 = Preferred over other vendors supplying the same product."
       }
@@ -115,7 +150,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Vendor URL."
       }
@@ -133,6 +173,7 @@
       "FillFactor": 0,
       "IndexColumns": "[AccountNumber]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -148,6 +189,7 @@
       "FillFactor": 0,
       "IndexColumns": "[BusinessEntityID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -161,6 +203,7 @@
       "RelatedTableSchema": "[Person]",
       "RelatedTable": "[BusinessEntity]",
       "RelatedColumns": "[BusinessEntityID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -178,6 +221,9 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": false,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Companies from whom Adventure Works Cycles purchases parts or other goods."
   }

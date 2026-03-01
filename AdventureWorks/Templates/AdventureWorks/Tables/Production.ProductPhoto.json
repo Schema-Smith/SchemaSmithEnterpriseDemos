@@ -13,7 +13,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Large image of the product."
       }
@@ -27,7 +32,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Large image file name."
       }
@@ -42,7 +52,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -56,7 +71,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for ProductPhoto records."
       }
@@ -70,7 +90,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Small image of the product."
       }
@@ -84,7 +109,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Small image file name."
       }
@@ -102,6 +132,7 @@
       "FillFactor": 0,
       "IndexColumns": "[ProductPhotoID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -119,6 +150,9 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": false,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Product images."
   }

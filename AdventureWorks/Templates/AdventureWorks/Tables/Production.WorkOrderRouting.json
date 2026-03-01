@@ -14,7 +14,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Actual manufacturing cost."
       }
@@ -28,7 +33,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Actual end date."
       }
@@ -43,7 +53,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Number of manufacturing hours used."
       }
@@ -57,7 +72,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Actual start date."
       }
@@ -71,7 +91,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Manufacturing location where the part is processed. Foreign key to Location.LocationID."
       }
@@ -86,7 +111,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -100,7 +130,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Indicates the manufacturing process sequence."
       }
@@ -115,7 +150,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Estimated manufacturing cost."
       }
@@ -129,7 +169,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to Product.ProductID."
       }
@@ -143,7 +188,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Planned manufacturing end date."
       }
@@ -157,7 +207,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Planned manufacturing start date."
       }
@@ -171,7 +226,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to WorkOrder.WorkOrderID."
       }
@@ -189,6 +249,7 @@
       "FillFactor": 0,
       "IndexColumns": "[ProductID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -204,6 +265,7 @@
       "FillFactor": 0,
       "IndexColumns": "[WorkOrderID],[ProductID],[OperationSequence]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -217,6 +279,7 @@
       "RelatedTableSchema": "[Production]",
       "RelatedTable": "[Location]",
       "RelatedColumns": "[LocationID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -229,6 +292,7 @@
       "RelatedTableSchema": "[Production]",
       "RelatedTable": "[WorkOrder]",
       "RelatedColumns": "[WorkOrderID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -240,6 +304,7 @@
     {
       "Name": "[CK_WorkOrderRouting_ActualEndDate]",
       "Expression": "[ActualEndDate]>=[ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL",
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Check constraint [ActualEndDate] >= [ActualStartDate] OR [ActualEndDate] IS NULL OR [ActualStartDate] IS NULL"
       }
@@ -247,6 +312,7 @@
     {
       "Name": "[CK_WorkOrderRouting_ScheduledEndDate]",
       "Expression": "[ScheduledEndDate]>=[ScheduledStartDate]",
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Check constraint [ScheduledEndDate] >= [ScheduledStartDate]"
       }
@@ -261,6 +327,9 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": false,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Work order details."
   }

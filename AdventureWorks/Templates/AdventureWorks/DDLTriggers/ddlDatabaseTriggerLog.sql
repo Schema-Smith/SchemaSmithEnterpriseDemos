@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER TRIGGER [ddlDatabaseTriggerLog] ON DATABASE 
+CREATE OR ALTER   TRIGGER [ddlDatabaseTriggerLog] ON DATABASE 
 FOR DDL_DATABASE_LEVEL_EVENTS AS 
+
 
 BEGIN
     SET NOCOUNT ON;
@@ -47,6 +48,7 @@ BEGIN
         @data
         );
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'TRIGGER',N'ddlDatabaseTriggerLog', NULL,NULL, NULL,NULL))

@@ -2,6 +2,7 @@
   "Schema": "[HumanResources]",
   "Name": "[Shift]",
   "CompressionType": "NONE",
+  "IsTemporal": false,
   "Columns": [
     {
       "Name": "[EndTime]",
@@ -11,6 +12,13 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
+      "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Shift end time."
       }
@@ -24,6 +32,13 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
+      "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -36,6 +51,13 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
+      "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Shift description."
       }
@@ -48,6 +70,13 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
+      "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key for Shift records."
       }
@@ -60,6 +89,13 @@
       "Sparse": false,
       "Collation": "",
       "DataMaskFunction": "",
+      "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
+      "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Shift start time."
       }
@@ -76,6 +112,8 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[Name]",
+      "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -90,6 +128,8 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[StartTime],[EndTime]",
+      "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Unique nonclustered index."
       }
@@ -104,15 +144,28 @@
       "ColumnStore": false,
       "FillFactor": 0,
       "IndexColumns": "[ShiftID]",
+      "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
     }
   ],
+  "XmlIndexes": [],
+  "ForeignKeys": [],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "UpdateFillFactor": false,
+  "ShouldApplyExpression": "",
+  "EnableCDC": false,
+  "EnableCDCAllColumns": false,
   "ContentFile": "TableContents/HumanResources.Shift.content",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": false,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Work shift lookup table."
   }

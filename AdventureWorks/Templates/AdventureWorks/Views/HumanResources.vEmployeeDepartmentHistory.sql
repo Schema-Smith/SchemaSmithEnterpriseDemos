@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [HumanResources].[vEmployeeDepartmentHistory] 
+CREATE OR ALTER   VIEW [HumanResources].[vEmployeeDepartmentHistory] 
 AS 
+
 
 SELECT 
     e.[BusinessEntityID] 
@@ -26,6 +27,7 @@ FROM [HumanResources].[Employee] e
     ON edh.[DepartmentID] = d.[DepartmentID] 
     INNER JOIN [HumanResources].[Shift] s
     ON s.[ShiftID] = edh.[ShiftID];
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'HumanResources', N'VIEW',N'vEmployeeDepartmentHistory', NULL,NULL))

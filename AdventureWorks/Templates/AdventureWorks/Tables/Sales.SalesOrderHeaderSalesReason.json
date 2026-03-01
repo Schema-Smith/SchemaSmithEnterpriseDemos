@@ -14,7 +14,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -28,7 +33,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to SalesOrderHeader.SalesOrderID."
       }
@@ -42,7 +52,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Primary key. Foreign key to SalesReason.SalesReasonID."
       }
@@ -60,6 +75,7 @@
       "FillFactor": 0,
       "IndexColumns": "[SalesOrderID],[SalesReasonID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -73,6 +89,7 @@
       "RelatedTableSchema": "[Sales]",
       "RelatedTable": "[SalesOrderHeader]",
       "RelatedColumns": "[SalesOrderID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "CASCADE",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -85,6 +102,7 @@
       "RelatedTableSchema": "[Sales]",
       "RelatedTable": "[SalesReason]",
       "RelatedColumns": "[SalesReasonID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -102,6 +120,9 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": false,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Cross-reference table mapping sales orders to sales reason codes."
   }

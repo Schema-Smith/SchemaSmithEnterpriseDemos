@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [HumanResources].[vEmployeeDepartment] 
+CREATE OR ALTER   VIEW [HumanResources].[vEmployeeDepartment] 
 AS 
+
 
 SELECT 
     e.[BusinessEntityID] 
@@ -24,6 +25,7 @@ FROM [HumanResources].[Employee] e
     INNER JOIN [HumanResources].[Department] d 
     ON edh.[DepartmentID] = d.[DepartmentID] 
 WHERE edh.EndDate IS NULL
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'HumanResources', N'VIEW',N'vEmployeeDepartment', NULL,NULL))

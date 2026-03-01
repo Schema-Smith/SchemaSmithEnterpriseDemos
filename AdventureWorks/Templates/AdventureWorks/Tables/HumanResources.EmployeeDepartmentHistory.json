@@ -13,7 +13,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Employee identification number. Foreign key to Employee.BusinessEntityID."
       }
@@ -27,7 +32,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Department in which the employee worked including currently. Foreign key to Department.DepartmentID."
       }
@@ -41,7 +51,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date the employee left the department. NULL = Current department."
       }
@@ -56,7 +71,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date and time the record was last updated."
       }
@@ -70,7 +90,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Identifies which 8-hour shift the employee works. Foreign key to Shift.Shift.ID."
       }
@@ -84,7 +109,12 @@
       "Collation": "",
       "DataMaskFunction": "",
       "EncryptionType": "NONE",
+      "EncryptionKey": "",
+      "EncryptionAlgorithm": "",
+      "ShouldApplyExpression": "",
       "EnableCDC": false,
+      "OldName": "",
+      "CDCenabled": false,
       "ExtendedProperties": {
         "MS_Description": "Date the employee started work in the department."
       }
@@ -102,6 +132,7 @@
       "FillFactor": 0,
       "IndexColumns": "[DepartmentID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -117,6 +148,7 @@
       "FillFactor": 0,
       "IndexColumns": "[ShiftID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Nonclustered index."
       }
@@ -132,6 +164,7 @@
       "FillFactor": 0,
       "IndexColumns": "[BusinessEntityID],[StartDate],[DepartmentID],[ShiftID]",
       "UpdateFillFactor": false,
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Primary key (clustered) constraint Clustered index created by a primary key constraint."
       }
@@ -145,6 +178,7 @@
       "RelatedTableSchema": "[HumanResources]",
       "RelatedTable": "[Department]",
       "RelatedColumns": "[DepartmentID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -157,6 +191,7 @@
       "RelatedTableSchema": "[HumanResources]",
       "RelatedTable": "[Employee]",
       "RelatedColumns": "[BusinessEntityID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -169,6 +204,7 @@
       "RelatedTableSchema": "[HumanResources]",
       "RelatedTable": "[Shift]",
       "RelatedColumns": "[ShiftID]",
+      "ShouldApplyExpression": "",
       "DeleteAction": "NO ACTION",
       "UpdateAction": "NO ACTION",
       "ExtendedProperties": {
@@ -180,6 +216,7 @@
     {
       "Name": "[CK_EmployeeDepartmentHistory_EndDate]",
       "Expression": "[EndDate]>=[StartDate] OR [EndDate] IS NULL",
+      "ShouldApplyExpression": "",
       "ExtendedProperties": {
         "MS_Description": "Check constraint [EndDate] >= [StartDate] OR [EndDate] IS NUL"
       }
@@ -194,6 +231,9 @@
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
+  "MergeDisableTriggers": false,
+  "OldName": "",
+  "CDCenabled": false,
   "ExtendedProperties": {
     "MS_Description": "Employee department transfers."
   }

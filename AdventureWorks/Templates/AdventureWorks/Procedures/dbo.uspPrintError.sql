@@ -6,8 +6,9 @@ GO
 -- execution to jump to the CATCH block of a TRY...CATCH construct. 
 -- Should be executed from within the scope of a CATCH block otherwise 
 -- it will return without printing any error information.
-CREATE OR ALTER PROCEDURE [dbo].[uspPrintError] 
+CREATE OR ALTER   PROCEDURE [dbo].[uspPrintError] 
 AS
+
 
 BEGIN
     SET NOCOUNT ON;
@@ -20,6 +21,7 @@ BEGIN
           ', Line ' + CONVERT(varchar(5), ERROR_LINE());
     PRINT ERROR_MESSAGE();
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspPrintError', NULL,NULL))

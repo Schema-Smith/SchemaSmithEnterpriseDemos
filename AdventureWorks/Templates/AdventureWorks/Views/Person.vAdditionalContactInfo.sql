@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Person].[vAdditionalContactInfo] 
+CREATE OR ALTER   VIEW [Person].[vAdditionalContactInfo] 
 AS 
+
 
 SELECT 
     [BusinessEntityID] 
@@ -50,6 +51,7 @@ OUTER APPLY [AdditionalContactInfo].nodes(
     'declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo"; 
     /ci:AdditionalContactInfo') AS ContactInfo(ref) 
 WHERE [AdditionalContactInfo] IS NOT NULL;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Person', N'VIEW',N'vAdditionalContactInfo', NULL,NULL))

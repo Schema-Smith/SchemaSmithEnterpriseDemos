@@ -2,13 +2,15 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetAccountingStartDate]()
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetAccountingStartDate]()
 RETURNS [datetime] 
 AS 
+
 
 BEGIN
     RETURN CONVERT(datetime, '20030701', 112);
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetAccountingStartDate', NULL,NULL))

@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Person].[vStateProvinceCountryRegion] 
+CREATE OR ALTER   VIEW [Person].[vStateProvinceCountryRegion] 
 WITH SCHEMABINDING 
 AS 
+
 
 SELECT 
     sp.[StateProvinceID] 
@@ -17,6 +18,7 @@ SELECT
 FROM [Person].[StateProvince] sp 
     INNER JOIN [Person].[CountryRegion] cr 
     ON sp.[CountryRegionCode] = cr.[CountryRegionCode];
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Person', N'VIEW',N'vStateProvinceCountryRegion', NULL,NULL))

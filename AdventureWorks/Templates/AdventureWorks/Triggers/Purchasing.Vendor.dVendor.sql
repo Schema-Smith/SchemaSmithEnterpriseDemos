@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER TRIGGER [Purchasing].[dVendor] ON [Purchasing].[Vendor] 
+CREATE OR ALTER   TRIGGER [Purchasing].[dVendor] ON [Purchasing].[Vendor] 
 INSTEAD OF DELETE NOT FOR REPLICATION AS 
+
 
 BEGIN
     DECLARE @Count int;
@@ -45,6 +46,7 @@ BEGIN
         EXECUTE [dbo].[uspLogError];
     END CATCH;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Purchasing', N'TABLE',N'Vendor', N'TRIGGER',N'dVendor'))

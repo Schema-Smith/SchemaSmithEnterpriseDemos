@@ -2,7 +2,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetContactInformation](@PersonID int)
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetContactInformation](@PersonID int)
 RETURNS @retContactInformation TABLE 
 (
     -- Columns returned by the function
@@ -13,6 +13,7 @@ RETURNS @retContactInformation TABLE
     [BusinessEntityType] [nvarchar](50) NULL
 )
 AS 
+
 
 -- Returns the first name, last name, job title and business entity type for the specified contact.
 -- Since a contact can serve multiple roles, more than one row may be returned.
@@ -72,6 +73,7 @@ BEGIN
 
 	RETURN;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetContactInformation', NULL,NULL))

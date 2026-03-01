@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [HumanResources].[vJobCandidateEmployment] 
+CREATE OR ALTER   VIEW [HumanResources].[vJobCandidateEmployment] 
 AS 
+
 
 SELECT 
     jc.[JobCandidateID] 
@@ -30,6 +31,7 @@ SELECT
 FROM [HumanResources].[JobCandidate] jc 
 CROSS APPLY jc.[Resume].nodes(N'declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Resume"; 
     /Resume/Employment') AS Employment(ref);
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'HumanResources', N'VIEW',N'vJobCandidateEmployment', NULL,NULL))

@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER TRIGGER [Production].[uWorkOrder] ON [Production].[WorkOrder] 
+CREATE OR ALTER   TRIGGER [Production].[uWorkOrder] ON [Production].[WorkOrder] 
 AFTER UPDATE AS 
+
 
 BEGIN
     DECLARE @Count int;
@@ -45,6 +46,7 @@ BEGIN
         EXECUTE [dbo].[uspLogError];
     END CATCH;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Production', N'TABLE',N'WorkOrder', N'TRIGGER',N'uWorkOrder'))

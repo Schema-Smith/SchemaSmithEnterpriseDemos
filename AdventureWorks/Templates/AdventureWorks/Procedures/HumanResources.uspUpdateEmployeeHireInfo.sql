@@ -2,7 +2,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER PROCEDURE [HumanResources].[uspUpdateEmployeeHireInfo]
+CREATE OR ALTER   PROCEDURE [HumanResources].[uspUpdateEmployeeHireInfo]
     @BusinessEntityID [int], 
     @JobTitle [nvarchar](50), 
     @HireDate [datetime], 
@@ -12,6 +12,7 @@ CREATE OR ALTER PROCEDURE [HumanResources].[uspUpdateEmployeeHireInfo]
     @CurrentFlag [dbo].[Flag] 
 WITH EXECUTE AS CALLER
 AS
+
 
 BEGIN
     SET NOCOUNT ON;
@@ -45,6 +46,7 @@ BEGIN
         EXECUTE [dbo].[uspLogError];
     END CATCH;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'HumanResources', N'PROCEDURE',N'uspUpdateEmployeeHireInfo', NULL,NULL))

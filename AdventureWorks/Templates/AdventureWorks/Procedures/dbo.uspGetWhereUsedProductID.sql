@@ -2,10 +2,11 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER PROCEDURE [dbo].[uspGetWhereUsedProductID]
+CREATE OR ALTER   PROCEDURE [dbo].[uspGetWhereUsedProductID]
     @StartProductID [int],
     @CheckDate [datetime]
 AS
+
 
 BEGIN
     SET NOCOUNT ON;
@@ -37,6 +38,7 @@ BEGIN
     ORDER BY b.[BOMLevel], b.[ProductAssemblyID], b.[ComponentID]
     OPTION (MAXRECURSION 25) 
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetWhereUsedProductID', NULL,NULL))

@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Production].[vProductAndDescription] 
+CREATE OR ALTER   VIEW [Production].[vProductAndDescription] 
 WITH SCHEMABINDING 
 AS 
+
 
 -- View (indexed or standard) to display products and product descriptions by language.
 SELECT 
@@ -20,6 +21,7 @@ FROM [Production].[Product] p
     ON pm.[ProductModelID] = pmx.[ProductModelID] 
     INNER JOIN [Production].[ProductDescription] pd 
     ON pmx.[ProductDescriptionID] = pd.[ProductDescriptionID];
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Production', N'VIEW',N'vProductAndDescription', NULL,NULL))

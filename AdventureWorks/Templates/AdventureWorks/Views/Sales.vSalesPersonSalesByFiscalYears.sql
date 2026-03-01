@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Sales].[vSalesPersonSalesByFiscalYears] 
+CREATE OR ALTER   VIEW [Sales].[vSalesPersonSalesByFiscalYears] 
 AS 
+
 
 SELECT 
     pvt.[SalesPersonID]
@@ -36,6 +37,7 @@ PIVOT
     FOR [FiscalYear] 
     IN ([2002], [2003], [2004])
 ) AS pvt;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Sales', N'VIEW',N'vSalesPersonSalesByFiscalYears', NULL,NULL))

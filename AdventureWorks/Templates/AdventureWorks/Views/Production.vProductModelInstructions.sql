@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Production].[vProductModelInstructions] 
+CREATE OR ALTER   VIEW [Production].[vProductModelInstructions] 
 AS 
+
 
 SELECT 
     [ProductModelID] 
@@ -23,6 +24,7 @@ CROSS APPLY [Instructions].nodes(N'declare default element namespace "http://sch
     /root/Location') MfgInstructions(ref)
 CROSS APPLY [MfgInstructions].ref.nodes('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"; 
     step') Steps(ref);
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Production', N'VIEW',N'vProductModelInstructions', NULL,NULL))

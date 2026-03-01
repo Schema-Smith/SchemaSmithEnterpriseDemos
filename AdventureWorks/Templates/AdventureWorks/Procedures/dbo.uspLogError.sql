@@ -7,9 +7,10 @@ GO
 -- TRY...CATCH construct. This should be executed from within the scope 
 -- of a CATCH block otherwise it will return without inserting error 
 -- information. 
-CREATE OR ALTER PROCEDURE [dbo].[uspLogError] 
+CREATE OR ALTER   PROCEDURE [dbo].[uspLogError] 
     @ErrorLogID [int] = 0 OUTPUT -- contains the ErrorLogID of the row inserted
 AS                               
+
 -- by uspLogError in the ErrorLog table
 BEGIN
     SET NOCOUNT ON;
@@ -63,6 +64,7 @@ BEGIN
         RETURN -1;
     END CATCH
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspLogError', NULL,NULL))

@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER PROCEDURE [dbo].[uspGetManagerEmployees]
+CREATE OR ALTER   PROCEDURE [dbo].[uspGetManagerEmployees]
     @BusinessEntityID [int]
 AS
+
 
 BEGIN
     SET NOCOUNT ON;
@@ -36,6 +37,7 @@ BEGIN
     ORDER BY [RecursionLevel], [EMP_cte].[OrganizationNode].ToString()
     OPTION (MAXRECURSION 25) 
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetManagerEmployees', NULL,NULL))

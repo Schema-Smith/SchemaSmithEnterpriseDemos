@@ -2,7 +2,8 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Sales].[vStoreWithContacts] AS 
+CREATE OR ALTER   VIEW [Sales].[vStoreWithContacts] AS 
+
 
 SELECT 
     s.[BusinessEntityID] 
@@ -30,6 +31,7 @@ FROM [Sales].[Store] s
 	ON pp.[BusinessEntityID] = p.[BusinessEntityID]
 	LEFT OUTER JOIN [Person].[PhoneNumberType] pnt
 	ON pnt.[PhoneNumberTypeID] = pp.[PhoneNumberTypeID];
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Sales', N'VIEW',N'vStoreWithContacts', NULL,NULL))

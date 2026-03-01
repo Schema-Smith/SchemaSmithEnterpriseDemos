@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Production].[vProductModelCatalogDescription] 
+CREATE OR ALTER   VIEW [Production].[vProductModelCatalogDescription] 
 AS 
+
 
 SELECT 
     [ProductModelID] 
@@ -64,6 +65,7 @@ SELECT
     ,[ModifiedDate]
 FROM [Production].[ProductModel] 
 WHERE [CatalogDescription] IS NOT NULL;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Production', N'VIEW',N'vProductModelCatalogDescription', NULL,NULL))

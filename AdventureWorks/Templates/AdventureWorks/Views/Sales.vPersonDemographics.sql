@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Sales].[vPersonDemographics] 
+CREATE OR ALTER   VIEW [Sales].[vPersonDemographics] 
 AS 
+
 
 SELECT 
     p.[BusinessEntityID] 
@@ -35,6 +36,7 @@ FROM [Person].[Person] p
 CROSS APPLY p.[Demographics].nodes(N'declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey"; 
     /IndividualSurvey') AS [IndividualSurvey](ref) 
 WHERE [Demographics] IS NOT NULL;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Sales', N'VIEW',N'vPersonDemographics', NULL,NULL))

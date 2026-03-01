@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER TRIGGER [HumanResources].[dEmployee] ON [HumanResources].[Employee] 
+CREATE OR ALTER   TRIGGER [HumanResources].[dEmployee] ON [HumanResources].[Employee] 
 INSTEAD OF DELETE NOT FOR REPLICATION AS 
+
 
 BEGIN
     DECLARE @Count int;
@@ -27,6 +28,7 @@ BEGIN
         END
     END;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'HumanResources', N'TABLE',N'Employee', N'TRIGGER',N'dEmployee'))

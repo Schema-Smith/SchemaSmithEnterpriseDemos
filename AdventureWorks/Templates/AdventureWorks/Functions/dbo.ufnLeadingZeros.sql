@@ -1,28 +1,14 @@
-/*
-Sales.Customer.AccountNumber depends on this function and is a computed expression that uses this function and is also in a unique index.
-Remove the index and the computed column before dropping the function.  
-*/
-DROP INDEX IF EXISTS AK_Customer_AccountNumber ON Sales.Customer
-GO
-
-IF EXISTS( SELECT *
-            FROM INFORMATION_SCHEMA.COLUMNS
-           WHERE TABLE_SCHEMA = 'Sales'
-             AND TABLE_NAME = 'Customer'
-             AND COLUMN_NAME = 'AccountNumber')
-  ALTER TABLE Sales.Customer DROP COLUMN AccountNumber
-GO
-
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnLeadingZeros](
+CREATE OR ALTER   FUNCTION [dbo].[ufnLeadingZeros](
     @Value int
 ) 
 RETURNS varchar(8) 
 WITH SCHEMABINDING 
 AS 
+
 
 BEGIN
     DECLARE @ReturnValue varchar(8);
@@ -32,6 +18,7 @@ BEGIN
 
     RETURN (@ReturnValue);
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnLeadingZeros', NULL,NULL))

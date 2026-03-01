@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetProductListPrice](@ProductID [int], @OrderDate [datetime])
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetProductListPrice](@ProductID [int], @OrderDate [datetime])
 RETURNS [money] 
 AS 
+
 
 BEGIN
     DECLARE @ListPrice money;
@@ -18,6 +19,7 @@ BEGIN
 
     RETURN @ListPrice;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetProductListPrice', NULL,NULL))

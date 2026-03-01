@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetDocumentStatusText](@Status [tinyint])
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetDocumentStatusText](@Status [tinyint])
 RETURNS [nvarchar](16) 
 AS 
+
 
 -- Returns the sales order status text representation for the status value.
 BEGIN
@@ -20,6 +21,7 @@ BEGIN
     
     RETURN @ret
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetDocumentStatusText', NULL,NULL))

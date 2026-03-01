@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER TRIGGER [Sales].[uSalesOrderHeader] ON [Sales].[SalesOrderHeader] 
+CREATE OR ALTER   TRIGGER [Sales].[uSalesOrderHeader] ON [Sales].[SalesOrderHeader] 
 AFTER UPDATE NOT FOR REPLICATION AS 
+
 
 BEGIN
     DECLARE @Count int;
@@ -71,6 +72,7 @@ BEGIN
         EXECUTE [dbo].[uspLogError];
     END CATCH;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Sales', N'TABLE',N'SalesOrderHeader', N'TRIGGER',N'uSalesOrderHeader'))

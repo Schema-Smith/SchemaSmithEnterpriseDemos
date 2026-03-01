@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetStock](@ProductID [int])
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetStock](@ProductID [int])
 RETURNS [int] 
 AS 
+
 
 -- Returns the stock level for the product. This function is used internally only
 BEGIN
@@ -20,6 +21,7 @@ BEGIN
     
     RETURN @ret
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetStock', NULL,NULL))

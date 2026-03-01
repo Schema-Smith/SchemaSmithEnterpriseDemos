@@ -2,9 +2,10 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetProductStandardCost](@ProductID [int], @OrderDate [datetime])
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetProductStandardCost](@ProductID [int], @OrderDate [datetime])
 RETURNS [money] 
 AS 
+
 
 -- Returns the standard cost for the product on a specific date.
 BEGIN
@@ -19,6 +20,7 @@ BEGIN
 
     RETURN @StandardCost;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetProductStandardCost', NULL,NULL))

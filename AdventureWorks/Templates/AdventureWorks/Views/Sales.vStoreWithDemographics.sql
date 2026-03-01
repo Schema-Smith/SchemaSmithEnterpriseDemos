@@ -2,7 +2,8 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER VIEW [Sales].[vStoreWithDemographics] AS 
+CREATE OR ALTER   VIEW [Sales].[vStoreWithDemographics] AS 
+
 
 SELECT 
     s.[BusinessEntityID] 
@@ -28,6 +29,7 @@ SELECT
     ,s.[Demographics].value('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"; 
         (/StoreSurvey/NumberEmployees)[1]', 'integer') AS [NumberEmployees] 
 FROM [Sales].[Store] s;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Sales', N'VIEW',N'vStoreWithDemographics', NULL,NULL))

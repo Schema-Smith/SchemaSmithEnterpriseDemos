@@ -2,8 +2,9 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE OR ALTER TRIGGER [Person].[iuPerson] ON [Person].[Person] 
+CREATE OR ALTER   TRIGGER [Person].[iuPerson] ON [Person].[Person] 
 AFTER INSERT, UPDATE NOT FOR REPLICATION AS 
+
 
 BEGIN
     DECLARE @Count int;
@@ -37,6 +38,7 @@ BEGIN
                 /IndividualSurvey/TotalPurchaseYTD') <> 1;
     END;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Person', N'TABLE',N'Person', N'TRIGGER',N'iuPerson'))

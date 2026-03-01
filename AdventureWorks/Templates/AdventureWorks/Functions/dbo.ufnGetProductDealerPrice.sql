@@ -4,9 +4,10 @@ GO
 
 
 
-CREATE OR ALTER FUNCTION [dbo].[ufnGetProductDealerPrice](@ProductID [int], @OrderDate [datetime])
+CREATE OR ALTER   FUNCTION [dbo].[ufnGetProductDealerPrice](@ProductID [int], @OrderDate [datetime])
 RETURNS [money] 
 AS 
+
 
 -- Returns the dealer price for the product on a specific date.
 BEGIN
@@ -24,6 +25,7 @@ BEGIN
 
     RETURN @DealerPrice;
 END;
+
 
 GO
 IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'FUNCTION',N'ufnGetProductDealerPrice', NULL,NULL))
