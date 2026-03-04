@@ -18,6 +18,7 @@ jobs:
         with:
           comment: "true" # enable comment mode
           use_gitignore: "false"
+          ajv_strict_mode: "false"
           json_schema: "./AdventureWorks/.json-schemas/tables.schema"
           base_dir: "./AdventureWorks/Templates/AdventureWorks/Tables"
 
@@ -32,5 +33,23 @@ jobs:
         with:
           comment: "true" # enable comment mode
           use_gitignore: "false"
+          ajv_strict_mode: "false"
           json_schema: "./Northwind/.json-schemas/tables.schema"
           base_dir: "./Northwind/Templates/Northwind/Tables"
+
+  json-yaml-validate-validproduct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: json-yaml-validate-validproduct
+        id: json-yaml-validate-validproduct
+        uses: GrantBirki/json-yaml-validate@v2.6.0
+        with:
+          comment: "true" # enable comment mode
+          use_gitignore: "false"
+          ajv_strict_mode: "false"
+          json_schema: "./ValidProduct/.json-schemas/tables.schema"
+          files: |
+            ./ValidProduct/Templates/Main/Tables/**/*.json
+            ./ValidProduct/Templates/Secondary/Tables/**/*.json
