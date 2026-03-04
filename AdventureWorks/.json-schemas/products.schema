@@ -1,70 +1,99 @@
-﻿{
+{
   "type": "object",
-    "properties": {
-        "Name": {
-            "type": "string"
-        },
-        "ValidationScript": {
-            "type": "string"
-        },
-        "TemplateOrder": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "ScriptTokens": {
-            "type": "object"
-        },
-        "ScriptFolders": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "FolderPath": {
-                        "type": "string"
-                    },
-                    "ServerToQuench": {
-                        "type": "string",
-                        "enum": [ "Primary", "Secondary", "Both" ]
-                    },
-                    "QuenchSlot": {
-                        "type": "string",
-                        "enum": [ "Before", "After" ]
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "FolderPath",
-                    "QuenchSlot"
-                ]
-            }
-        },
-        "BranchNameFile": {
-            "type": "string"
-        },
-        "BeforeBranchNameMask": {
-            "type": "string"
-        },
-        "AfterBranchNameMask": {
-            "type": "string"
-        },
-        "DropUnknownIndexes": {
-            "type": "boolean"
-        },
-        "VersionStampScript": {
-            "type": "string"
-        },
-        "BaselineValidationScript": {
-            "type": "string"
-        },
-        "Platform": {
-            "type": "string"
-        }
+  "properties": {
+    "Name": {
+      "x-core": true,
+      "type": "string"
     },
+    "ValidationScript": {
+      "x-core": true,
+      "type": "string"
+    },
+    "TemplateOrder": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ScriptTokens": {
+      "x-core": true,
+      "type": "object"
+    },
+    "ScriptFolders": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "FolderPath": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ServerToQuench": {
+            "x-core": true,
+            "type": "string",
+            "enum": [
+              "Primary",
+              "Secondary",
+              "Both"
+            ]
+          },
+          "QuenchSlot": {
+            "x-core": true,
+            "type": "string",
+            "enum": [
+              "Before",
+              "After",
+              "None"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "FolderPath",
+          "ServerToQuench",
+          "QuenchSlot"
+        ]
+      }
+    },
+    "BranchNameFile": {
+      "x-core": true,
+      "type": "string"
+    },
+    "BeforeBranchNameMask": {
+      "x-core": true,
+      "type": "string"
+    },
+    "AfterBranchNameMask": {
+      "x-core": true,
+      "type": "string"
+    },
+    "DropUnknownIndexes": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "BaselineValidationScript": {
+      "x-core": true,
+      "type": "string"
+    },
+    "VersionStampScript": {
+      "x-core": true,
+      "type": "string"
+    },
+    "Platform": {
+      "x-core": true,
+      "type": "string"
+    }
+  },
   "additionalProperties": false,
   "required": [
     "Name",
-    "ValidationScript"
-  ]
+    "ValidationScript",
+    "TemplateOrder",
+    "ScriptTokens",
+    "ScriptFolders",
+    "DropUnknownIndexes"
+  ],
+  "x-core-version": "1.1.0"
 }

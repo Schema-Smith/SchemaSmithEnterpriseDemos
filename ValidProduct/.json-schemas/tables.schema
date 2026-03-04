@@ -1,482 +1,600 @@
 {
   "type": "object",
-    "properties": {
-        "Schema": {
+  "properties": {
+    "Schema": {
+      "x-core": true,
+      "type": "string"
+    },
+    "Name": {
+      "x-core": true,
+      "type": "string"
+    },
+    "CompressionType": {
+      "x-core": true,
+      "type": "string"
+    },
+    "IsTemporal": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "Columns": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "x-core": true,
             "type": "string"
-        },
-        "Name": {
+          },
+          "DataType": {
+            "x-core": true,
             "type": "string"
-        },
-        "CompressionType": {
-            "type": "string"
-        },
-        "IsTemporal": {
+          },
+          "Nullable": {
+            "x-core": true,
             "type": "boolean"
-        },
-        "UpdateFillFactor": {
-            "type": "boolean"
-        },
-        "ShouldApplyExpression": {
+          },
+          "Default": {
+            "x-core": true,
             "type": "string"
-        },
-        "EnableCDC": {
-            "type": "boolean"
-        },
-        "ContentFile": {
+          },
+          "CheckExpression": {
+            "x-core": true,
             "type": "string"
-        },
-        "MergeType": {
+          },
+          "ComputedExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "Persisted": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "Sparse": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "Collation": {
+            "x-core": true,
+            "type": "string"
+          },
+          "DataMaskFunction": {
+            "x-core": true,
+            "type": "string"
+          },
+          "EncryptionType": {
+            "x-core": true,
             "type": "string",
-            "pattern": "Insert|Insert/Update|Insert/Update/Delete"
-        },
-        "MatchColumns": {
+            "pattern": "DETERMINISTIC|RANDOMIZED|NONE"
+          },
+          "EncryptionKey": {
+            "x-core": true,
             "type": "string"
-        },
-        "MergeFilter": {
+          },
+          "EncryptionAlgorithm": {
+            "x-core": true,
             "type": "string"
-        },
-        "OldName": {
+          },
+          "ShouldApplyExpression": {
+            "x-core": true,
             "type": "string"
-        },
-        "Description": {
-          "type": "string",
-          "maxLength": 1000,
-          "minLength": 0
-        },
-        "Domain": {
-          "type": "string",
-          "pattern": "Employee|Company|Customer|Order",
-        },
-        "IsSystemDeliveredContent": {
-          "type": "boolean"
-        },
-        "MaxPageSizeForLookups": {
-          "type": "integer",
-          "maximum": 100,
-          "minimum": 5,
-          "multipleOf": 5
-        },
-        "DateAdded": {
-          "type": "string",
-          "format": "date"
-        },
-        "CustomNumber": {
-          "type": "number",
-          "maximum": 21,
-          "minimum": 3,
-          "multipleOf": 3
-        },
-        "Comment": {
-          "description": "MEMO",
-          "type": "string"
-        },
-        "SQLExpression": {
-          "description": "SQL",
-          "title": "SQL Expression",
-          "type": "string"
-        },
-        "MyLookup": {
-          "description": "DROPDOWN:MyLookupItems",
-          "type": "string"
-        },
-        "DynamicObject": {
-          "description": "DICTIONARY",
-          "type": "object"
-        },
-        "Categories": {
-          "description": "CHECKLIST:Categories",
-          "type": "array",
-          "items": {
+          },
+          "EnableCDC": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "OldName": {
+            "x-core": true,
             "type": "string"
-          }
-        },
-        "Columns": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "DataType": {
-                        "type": "string"
-                    },
-                    "Nullable": {
-                        "type": "boolean"
-                    },
-                    "Default": {
-                        "type": "string"
-                    },
-                    "CheckExpression": {
-                        "type": "string"
-                    },
-                    "ComputedExpression": {
-                        "type": "string"
-                    },
-                    "Persisted": {
-                        "type": "boolean"
-                    },
-                    "Sparse": {
-                        "type": "boolean"
-                    },
-                    "Collation": {
-                        "type": "string"
-                    },
-                    "DataMaskFunction": {
-                        "type": "string"
-                    },
-                    "EncryptionType": {
-                        "type": "string",
-                        "pattern": "DETERMINISTIC|RANDOMIZED|NONE"
-                    },
-                    "EncryptionKey": {
-                        "type": "string"
-                    },
-                    "EncryptionAlgorithm": {
-                        "type": "string"
-                    },
-                    "ShouldApplyExpression": {
-                        "type": "string"
-                    },
-                    "EnableCDC": {
-                        "type": "boolean"
-                    },
-                    "OldName": {
-                        "type": "string"
-                    },
-                    "ExtendedProperties": {
-                        "description": "DICTIONARY",
-                        "type": "object"
-                    },
-                    "Documentation": {
-                      "type": "object",
-                      "properties": {
-                        "Description": {
-                          "type": "string",
-                          "maxLength": 1000
-                        },
-                        "DataSource": {
-                          "type": "string",
-                          "enum": ["Spreadsheet", "User Input", "API", "Custom Import"]
-                        },
-                        "DataSource2": {
-                          "type": "string",
-                          "enum": ["Spreadsheet", "User Input", "API", "Custom Import"],
-                          "meta:enum": {
-                            "Spreadsheet": "Spreadsheet Description",
-                            "User Input": "User Input Description",
-                            "API": "API Description",
-                            "Custom Import": "Custom Import Description"
-                          }
-                        },
-                        "AddedOn": {
-                          "type": "string",
-                          "format": "date"
-                        },
-                        "JiraNumber": {
-                          "type": "string",
-                          "minLength": 5,
-                          "maxLength": 20
-                        },
-                        "CustomTime": {
-                          "type": "string",
-                          "format": "time"
-                        },
-                        "CustomDateTime": {
-                          "type": "string",
-                          "format": "date-time"
-                        },
-                        "ReportingAllowed": {
-                          "type": "boolean"
-                        },
-                        "Comment": {
-                          "description": "MEMO",
-                          "type": "string"
-                        },
-                        "SQLExpression": {
-                            "description": "SQL",
-                            "title": "SQL Expression",
-                            "type": "string"
-                        },
-                        "MyMissingLookup": {
-                          "description": "DROPDOWN:IntentionallyMissing",
-                          "type": "string"
-                        },
-                        "DynamicObject": {
-                          "description": "DICTIONARY",
-                          "type": "object"
-                        },
-                        "Categories": {
-                          "description": "CHECKLIST:Categories",
-                          "type": "array",
-                          "items": {
-                            "type": "string"
-                          }
-                        },
-                        "UnknownArray": {
-                            "type": "array"
-                        },
-                        "UnknownType": {
-                          "type": "null"
-                        },
-                        "BadCheckList": {
-                          "description": "CHECKLIST:IntentionallyMissing",
-                          "type": "array",
-                          "items": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "additionalProperties": false
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "Name",
-                    "DataType"
-                ]
-            }
-        },
-        "Indexes": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "CompressionType": {
-                        "type": "string"
-                    },
-                    "PrimaryKey": {
-                        "type": "boolean"
-                    },
-                    "Unique": {
-                        "type": "boolean"
-                    },
-                    "UniqueConstraint": {
-                        "type": "boolean"
-                    },
-                    "Clustered": {
-                        "type": "boolean"
-                    },
-                    "ColumnStore": {
-                        "type": "boolean"
-                    },
-                    "FillFactor": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 100
-                    },
-                    "IndexColumns": {
-                        "type": "string"
-                    },
-                    "IncludeColumns": {
-                        "type": "string"
-                    },
-                    "FilterExpression": {
-                        "type": "string"
-                    },
-                    "UpdateFillFactor": {
-                        "type": "boolean"
-                    },
-                    "ShouldApplyExpression": {
-                        "type": "string"
-                    },
-                    "ExtendedProperties": {
-                        "description": "DICTIONARY",
-                        "type": "object"
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "Name",
-                    "IndexColumns"
-                ]
-            }
-        },
-        "XmlIndexes": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "IsPrimary": {
-                        "type": "boolean"
-                    },
-                    "Column": {
-                        "type": "string"
-                    },
-                    "PrimaryIndex": {
-                        "type": "string"
-                    },
-                    "SecondaryIndexType": {
-                        "type": "string",
-                        "pattern": "VALUE|PATH|PROPERTY"
-                    },
-                    "ShouldApplyExpression": {
-                        "type": "string"
-                    },
-                    "ExtendedProperties": {
-                        "description": "DICTIONARY",
-                        "type": "object"
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "Name",
-                    "Column"
-                ]
-            }
-        },
-        "ForeignKeys": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "Columns": {
-                        "type": "string"
-                    },
-                    "RelatedTableSchema": {
-                        "type": "string"
-                    },
-                    "RelatedTable": {
-                        "type": "string"
-                    },
-                    "RelatedColumns": {
-                        "type": "string"
-                    },
-                    "ShouldApplyExpression": {
-                        "type": "string"
-                    },
-                    "DeleteAction": {
-                        "type": "string",
-                        "pattern": "NO ACTION|CASCADE|SET NULL|SET DEFAULT"
-                    },
-                    "UpdateAction": {
-                        "type": "string",
-                        "pattern": "NO ACTION|CASCADE|SET NULL|SET DEFAULT"
-                    },
-                    "ExtendedProperties": {
-                        "description": "DICTIONARY",
-                        "type": "object"
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "Name",
-                    "Columns",
-                    "RelatedTable",
-                    "RelatedColumns"
-                ]
-            }
-        },
-        "CheckConstraints": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "Expression": {
-                        "type": "string"
-                    },
-                    "ShouldApplyExpression": {
-                        "type": "string"
-                    },
-                    "ExtendedProperties": {
-                        "description": "DICTIONARY",
-                        "type": "object"
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "Name",
-                    "Expression"
-                ]
-            }
-        },
-        "Statistics": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "Columns": {
-                        "type": "string"
-                    },
-                    "SampleSize": {
-                        "type": "integer",
-                        "minimum": 0,
-                        "maximum": 100
-                    },
-                    "FilterExpression": {
-                        "type": "string"
-                    },
-                    "ShouldApplyExpression": {
-                        "type": "string"
-                    },
-                    "ExtendedProperties": {
-                        "description": "DICTIONARY",
-                        "type": "object"
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "Name",
-                    "Columns"
-                ]
-            }
-        },
-        "FullTextIndex": {
-            "type": "object",
-            "properties": {
-                "FullTextCatalog": {
-                    "type": "string"
-                },
-                "KeyIndex": {
-                    "type": "string"
-                },
-                "ChangeTracking": {
-                    "type": "string"
-                },
-                "StopList": {
-                    "type": "string"
-                },
-                "Columns": {
-                    "type": "string"
-                },
-                "ShouldApplyExpression": {
-                    "type": "string"
-                },
-                "ExtendedProperties": {
-                    "description": "DICTIONARY",
-                    "type": "object"
-                }
-            },
-            "additionalProperties": false,
-            "required": [
-                "FullTextCatalog",
-                "KeyIndex",
-                "Columns"
-            ]
-        },
-        "ExtendedProperties": {
+          },
+          "ExtendedProperties": {
             "description": "DICTIONARY",
             "type": "object"
-        }
+          },
+          "Documentation": {
+            "type": "object",
+            "properties": {
+              "Description": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "DataSource": {
+                "type": "string",
+                "enum": [
+                  "Spreadsheet",
+                  "User Input",
+                  "API",
+                  "Custom Import"
+                ]
+              },
+              "DataSource2": {
+                "type": "string",
+                "enum": [
+                  "Spreadsheet",
+                  "User Input",
+                  "API",
+                  "Custom Import"
+                ],
+                "meta:enum": {
+                  "Spreadsheet": "Spreadsheet Description",
+                  "User Input": "User Input Description",
+                  "API": "API Description",
+                  "Custom Import": "Custom Import Description"
+                }
+              },
+              "AddedOn": {
+                "type": "string",
+                "format": "date"
+              },
+              "JiraNumber": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 20
+              },
+              "CustomTime": {
+                "type": "string",
+                "format": "time"
+              },
+              "CustomDateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "ReportingAllowed": {
+                "type": "boolean"
+              },
+              "Comment": {
+                "description": "MEMO",
+                "type": "string"
+              },
+              "SQLExpression": {
+                "description": "SQL",
+                "title": "SQL Expression",
+                "type": "string"
+              },
+              "MyMissingLookup": {
+                "description": "DROPDOWN:IntentionallyMissing",
+                "type": "string"
+              },
+              "DynamicObject": {
+                "description": "DICTIONARY",
+                "type": "object"
+              },
+              "Categories": {
+                "description": "CHECKLIST:Categories",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "UnknownArray": {
+                "type": "array"
+              },
+              "UnknownType": {
+                "type": "null"
+              },
+              "BadCheckList": {
+                "description": "CHECKLIST:IntentionallyMissing",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "DataType",
+          "Nullable",
+          "Persisted",
+          "Sparse",
+          "EnableCDC"
+        ]
+      }
     },
+    "Indexes": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "x-core": true,
+            "type": "string"
+          },
+          "CompressionType": {
+            "x-core": true,
+            "type": "string"
+          },
+          "PrimaryKey": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "Unique": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "UniqueConstraint": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "Clustered": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "ColumnStore": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "FillFactor": {
+            "x-core": true,
+            "type": "integer",
+            "minimum": 0.0,
+            "maximum": 100.0
+          },
+          "IndexColumns": {
+            "x-core": true,
+            "type": "string"
+          },
+          "IncludeColumns": {
+            "x-core": true,
+            "type": "string"
+          },
+          "FilterExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "UpdateFillFactor": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "ShouldApplyExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ExtendedProperties": {
+            "description": "DICTIONARY",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "PrimaryKey",
+          "Unique",
+          "UniqueConstraint",
+          "Clustered",
+          "ColumnStore",
+          "FillFactor",
+          "IndexColumns",
+          "UpdateFillFactor"
+        ]
+      }
+    },
+    "XmlIndexes": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "x-core": true,
+            "type": "string"
+          },
+          "IsPrimary": {
+            "x-core": true,
+            "type": "boolean"
+          },
+          "Column": {
+            "x-core": true,
+            "type": "string"
+          },
+          "PrimaryIndex": {
+            "x-core": true,
+            "type": "string"
+          },
+          "SecondaryIndexType": {
+            "x-core": true,
+            "type": "string",
+            "pattern": "VALUE|PATH|PROPERTY"
+          },
+          "ShouldApplyExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ExtendedProperties": {
+            "description": "DICTIONARY",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "IsPrimary",
+          "Column"
+        ]
+      }
+    },
+    "ForeignKeys": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "x-core": true,
+            "type": "string"
+          },
+          "Columns": {
+            "x-core": true,
+            "type": "string"
+          },
+          "RelatedTableSchema": {
+            "x-core": true,
+            "type": "string"
+          },
+          "RelatedTable": {
+            "x-core": true,
+            "type": "string"
+          },
+          "RelatedColumns": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ShouldApplyExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "DeleteAction": {
+            "x-core": true,
+            "type": "string",
+            "pattern": "NO ACTION|CASCADE|SET NULL|SET DEFAULT"
+          },
+          "UpdateAction": {
+            "x-core": true,
+            "type": "string",
+            "pattern": "NO ACTION|CASCADE|SET NULL|SET DEFAULT"
+          },
+          "ExtendedProperties": {
+            "description": "DICTIONARY",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Columns",
+          "RelatedTable",
+          "RelatedColumns"
+        ]
+      }
+    },
+    "CheckConstraints": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "x-core": true,
+            "type": "string"
+          },
+          "Expression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ShouldApplyExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ExtendedProperties": {
+            "description": "DICTIONARY",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Expression"
+        ]
+      }
+    },
+    "Statistics": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "x-core": true,
+            "type": "string"
+          },
+          "Columns": {
+            "x-core": true,
+            "type": "string"
+          },
+          "SampleSize": {
+            "x-core": true,
+            "type": "integer",
+            "minimum": 0.0,
+            "maximum": 100.0
+          },
+          "FilterExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ShouldApplyExpression": {
+            "x-core": true,
+            "type": "string"
+          },
+          "ExtendedProperties": {
+            "description": "DICTIONARY",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Columns",
+          "SampleSize"
+        ]
+      }
+    },
+    "FullTextIndex": {
+      "type": "object",
+      "properties": {
+        "FullTextCatalog": {
+          "x-core": true,
+          "type": "string"
+        },
+        "KeyIndex": {
+          "x-core": true,
+          "type": "string"
+        },
+        "ChangeTracking": {
+          "x-core": true,
+          "type": "string"
+        },
+        "StopList": {
+          "x-core": true,
+          "type": "string"
+        },
+        "Columns": {
+          "x-core": true,
+          "type": "string"
+        },
+        "ShouldApplyExpression": {
+          "x-core": true,
+          "type": "string"
+        },
+        "ExtendedProperties": {
+          "description": "DICTIONARY",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "FullTextCatalog",
+        "KeyIndex",
+        "Columns"
+      ],
+      "x-core": true
+    },
+    "UpdateFillFactor": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "ShouldApplyExpression": {
+      "x-core": true,
+      "type": "string"
+    },
+    "EnableCDC": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "EnableCDCAllColumns": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "ContentFile": {
+      "x-core": true,
+      "type": "string"
+    },
+    "MergeType": {
+      "x-core": true,
+      "type": "string",
+      "pattern": "Insert|Insert/Update|Insert/Update/Delete"
+    },
+    "MatchColumns": {
+      "x-core": true,
+      "type": "string"
+    },
+    "MergeFilter": {
+      "x-core": true,
+      "type": "string"
+    },
+    "MergeDisableTriggers": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "OldName": {
+      "x-core": true,
+      "type": "string"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 1000,
+      "minLength": 0
+    },
+    "Domain": {
+      "type": "string",
+      "pattern": "Employee|Company|Customer|Order"
+    },
+    "IsSystemDeliveredContent": {
+      "type": "boolean"
+    },
+    "MaxPageSizeForLookups": {
+      "type": "integer",
+      "maximum": 100,
+      "minimum": 5,
+      "multipleOf": 5
+    },
+    "DateAdded": {
+      "type": "string",
+      "format": "date"
+    },
+    "CustomNumber": {
+      "type": "number",
+      "maximum": 21,
+      "minimum": 3,
+      "multipleOf": 3
+    },
+    "Comment": {
+      "description": "MEMO",
+      "type": "string"
+    },
+    "SQLExpression": {
+      "description": "SQL",
+      "title": "SQL Expression",
+      "type": "string"
+    },
+    "MyLookup": {
+      "description": "DROPDOWN:MyLookupItems",
+      "type": "string"
+    },
+    "DynamicObject": {
+      "description": "DICTIONARY",
+      "type": "object"
+    },
+    "Categories": {
+      "description": "CHECKLIST:Categories",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ExtendedProperties": {
+      "description": "DICTIONARY",
+      "type": "object"
+    }
+  },
   "additionalProperties": false,
   "required": [
     "Name",
-    "Columns"
-  ]
+    "IsTemporal",
+    "Columns",
+    "Indexes",
+    "XmlIndexes",
+    "ForeignKeys",
+    "CheckConstraints",
+    "Statistics",
+    "UpdateFillFactor",
+    "EnableCDC",
+    "EnableCDCAllColumns",
+    "MergeDisableTriggers"
+  ],
+  "x-core-version": "1.1.0"
 }

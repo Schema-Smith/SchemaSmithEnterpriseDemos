@@ -1,56 +1,90 @@
-﻿{
+{
   "type": "object",
-    "properties": {
-        "Name": {
-            "type": "string"
-        },
-        "DatabaseIdentificationScript": {
-            "type": "string"
-        },
-        "VersionStampScript": {
-            "type": "string"
-        },
-        "IndexOnlyTableQuenches": {
-            "type": "boolean"
-        },
-        "ScriptFolders": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "FolderPath": {
-                        "type": "string"
-                    },
-                    "QuenchSlot": {
-                        "type": "string",
-                        "enum": [ "Before", "Objects", "AfterTablesObjects", "After" ]
-                    }
-                },
-                "additionalProperties": false,
-                "required": [
-                    "FolderPath",
-                    "QuenchSlot"
-                ]
-            }
-        },
-        "ServerToQuench": {
-            "type": "string",
-            "enum": [ "Primary", "Secondary", "Both" ]
-        },
-        "ScriptTokens": {
-            "type": "object"
-        },
-        "UpdateFillFactor": {
-            "type": "boolean"
-        },
-        "BaselineValidationScript": {
-            "type": "string"
-        }
+  "properties": {
+    "Name": {
+      "x-core": true,
+      "type": "string"
     },
+    "DatabaseIdentificationScript": {
+      "x-core": true,
+      "type": "string"
+    },
+    "VersionStampScript": {
+      "x-core": true,
+      "type": "string"
+    },
+    "IndexOnlyTableQuenches": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "ScriptFolders": {
+      "x-core": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "FolderPath": {
+            "x-core": true,
+            "type": "string"
+          },
+          "QuenchSlot": {
+            "x-core": true,
+            "type": "string",
+            "enum": [
+              "Before",
+              "Objects",
+              "BetweenTablesAndKeys",
+              "AfterTablesScripts",
+              "AfterTablesObjects",
+              "TableData",
+              "After",
+              "None"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "FolderPath",
+          "QuenchSlot"
+        ]
+      }
+    },
+    "ServerToQuench": {
+      "x-core": true,
+      "type": "string",
+      "enum": [
+        "Primary",
+        "Secondary",
+        "Both"
+      ]
+    },
+    "ScriptTokens": {
+      "x-core": true,
+      "type": "object"
+    },
+    "UpdateFillFactor": {
+      "x-core": true,
+      "type": "boolean"
+    },
+    "BaselineValidationScript": {
+      "x-core": true,
+      "type": "string"
+    },
+    "Required": {
+      "x-core": true,
+      "type": "boolean"
+    }
+  },
   "additionalProperties": false,
   "required": [
     "Name",
     "DatabaseIdentificationScript",
-    "ServerToQuench"
-  ]
+    "IndexOnlyTableQuenches",
+    "ScriptFolders",
+    "ServerToQuench",
+    "ScriptTokens",
+    "UpdateFillFactor",
+    "Required"
+  ],
+  "x-core-version": "1.1.0"
 }
