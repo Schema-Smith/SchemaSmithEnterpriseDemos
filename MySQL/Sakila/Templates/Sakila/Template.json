@@ -1,0 +1,42 @@
+{
+  "Name": "Sakila",
+  "SchemaIdentificationScript": "SELECT SCHEMA_NAME FROM information_schema.schemata WHERE SCHEMA_NAME = '{{SakilaDb}}'",
+  "IndexOnlyTableQuenches": false,
+  "ScriptFolders": [
+    {
+      "FolderPath": "Before Scripts",
+      "QuenchSlot": "Before"
+    },
+    {
+      "FolderPath": "Events",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Functions",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Procedures",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Triggers",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "Views",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "Table Data",
+      "QuenchSlot": "TableData"
+    },
+    {
+      "FolderPath": "After Scripts",
+      "QuenchSlot": "After"
+    }
+  ],
+  "ScriptTokens": {},
+  "UpdateFillFactor": true,
+  "Required": true
+}

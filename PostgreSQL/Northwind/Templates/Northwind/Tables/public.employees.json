@@ -1,0 +1,252 @@
+{
+  "Schema": "public",
+  "Name": "employees",
+  "Columns": [
+    {
+      "Name": "address",
+      "DataType": "varchar(60)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "birth_date",
+      "DataType": "date",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "city",
+      "DataType": "varchar(15)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "country",
+      "DataType": "varchar(15)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "employee_id",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "extension",
+      "DataType": "varchar(4)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "first_name",
+      "DataType": "varchar(10)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "hire_date",
+      "DataType": "date",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "home_phone",
+      "DataType": "varchar(24)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "last_name",
+      "DataType": "varchar(20)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "notes",
+      "DataType": "text",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "photo",
+      "DataType": "bytea",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "photo_path",
+      "DataType": "varchar(255)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "postal_code",
+      "DataType": "varchar(10)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "region",
+      "DataType": "varchar(15)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "reports_to",
+      "DataType": "int2",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "title",
+      "DataType": "varchar(30)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "title_of_courtesy",
+      "DataType": "varchar(25)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "pk_employees",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": false,
+      "IndexColumns": "employee_id",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "fk_employees_employees",
+      "Columns": "reports_to",
+      "RelatedTableSchema": "public",
+      "RelatedTable": "employees",
+      "RelatedColumns": "employee_id",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    }
+  ],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "Table Contents/public.employees.tabledata",
+  "MergeType": "Insert/Update",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

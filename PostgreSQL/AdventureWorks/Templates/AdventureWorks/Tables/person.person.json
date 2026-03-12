@@ -1,0 +1,216 @@
+{
+  "Schema": "person",
+  "Name": "person",
+  "Columns": [
+    {
+      "Name": "additionalcontactinfo",
+      "DataType": "xml",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "businessentityid",
+      "DataType": "int4",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "demographics",
+      "DataType": "xml",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "emailpromotion",
+      "DataType": "int4",
+      "Nullable": false,
+      "Default": "0",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "firstname",
+      "DataType": "\"public\".\"Name\"",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "lastname",
+      "DataType": "\"public\".\"Name\"",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "middlename",
+      "DataType": "\"public\".\"Name\"",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "modifieddate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "now()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "namestyle",
+      "DataType": "\"public\".\"NameStyle\"",
+      "Nullable": false,
+      "Default": "false",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "persontype",
+      "DataType": "CHAR(2)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "rowguid",
+      "DataType": "uuid",
+      "Nullable": false,
+      "Default": "uuid_generate_v1()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "suffix",
+      "DataType": "varchar(10)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "title",
+      "DataType": "varchar(8)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PK_Person_BusinessEntityID",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": true,
+      "IndexColumns": "businessentityid",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "FK_Person_BusinessEntity_BusinessEntityID",
+      "Columns": "businessentityid",
+      "RelatedTableSchema": "person",
+      "RelatedTable": "businessentity",
+      "RelatedColumns": "businessentityid",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    }
+  ],
+  "CheckConstraints": [
+    {
+      "Name": "CK_Person_EmailPromotion",
+      "Expression": "(emailpromotion >= 0) AND (emailpromotion <= 2)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Person_PersonType",
+      "Expression": "(persontype IS NULL) OR (upper((persontype)::text) = ANY (ARRAY['SC'::text, 'VC'::text, 'IN'::text, 'EM'::text, 'SP'::text, 'GC'::text]))",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    }
+  ],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "",
+  "MergeType": "NONE",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

@@ -1,0 +1,62 @@
+{
+  "Schema": "public",
+  "Name": "region",
+  "Columns": [
+    {
+      "Name": "region_description",
+      "DataType": "varchar(60)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "region_id",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": true,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "pk_region",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": false,
+      "IndexColumns": "region_id",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [],
+  "CheckConstraints": [],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "Table Contents/public.region.tabledata",
+  "MergeType": "Insert/Update",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

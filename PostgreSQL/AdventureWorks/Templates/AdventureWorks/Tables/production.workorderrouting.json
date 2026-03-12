@@ -1,0 +1,236 @@
+{
+  "Schema": "production",
+  "Name": "workorderrouting",
+  "Columns": [
+    {
+      "Name": "actualcost",
+      "DataType": "numeric",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "MAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "actualenddate",
+      "DataType": "timestamp",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "actualresourcehrs",
+      "DataType": "numeric(9, 4)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "MAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "actualstartdate",
+      "DataType": "timestamp",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "locationid",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "modifieddate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "now()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "operationsequence",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "plannedcost",
+      "DataType": "numeric",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "MAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productid",
+      "DataType": "int4",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "scheduledenddate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "scheduledstartdate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "workorderid",
+      "DataType": "int4",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PK_WorkOrderRouting_WorkOrderID_ProductID_OperationSequence",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": true,
+      "IndexColumns": "workorderid,productid,operationsequence",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "FK_WorkOrderRouting_Location_LocationID",
+      "Columns": "locationid",
+      "RelatedTableSchema": "production",
+      "RelatedTable": "location",
+      "RelatedColumns": "locationid",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    },
+    {
+      "Name": "FK_WorkOrderRouting_WorkOrder_WorkOrderID",
+      "Columns": "workorderid",
+      "RelatedTableSchema": "production",
+      "RelatedTable": "workorder",
+      "RelatedColumns": "workorderid",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    }
+  ],
+  "CheckConstraints": [
+    {
+      "Name": "CK_WorkOrderRouting_ActualCost",
+      "Expression": "actualcost > 0.00",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_WorkOrderRouting_ActualEndDate",
+      "Expression": "(actualenddate >= actualstartdate) OR (actualenddate IS NULL) OR (actualstartdate IS NULL)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_WorkOrderRouting_ActualResourceHrs",
+      "Expression": "actualresourcehrs >= 0.0000",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_WorkOrderRouting_PlannedCost",
+      "Expression": "plannedcost > 0.00",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_WorkOrderRouting_ScheduledEndDate",
+      "Expression": "scheduledenddate >= scheduledstartdate",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    }
+  ],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "",
+  "MergeType": "NONE",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

@@ -1,0 +1,431 @@
+{
+  "Schema": "production",
+  "Name": "product",
+  "Columns": [
+    {
+      "Name": "class",
+      "DataType": "CHAR(2)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "color",
+      "DataType": "varchar(15)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "daystomanufacture",
+      "DataType": "int4",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "discontinueddate",
+      "DataType": "timestamp",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "finishedgoodsflag",
+      "DataType": "\"public\".\"Flag\"",
+      "Nullable": false,
+      "Default": "true",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "listprice",
+      "DataType": "numeric",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "MAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "makeflag",
+      "DataType": "\"public\".\"Flag\"",
+      "Nullable": false,
+      "Default": "true",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "modifieddate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "now()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "name",
+      "DataType": "\"public\".\"Name\"",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productid",
+      "DataType": "int4",
+      "Nullable": false,
+      "Default": "nextval('production.product_productid_seq'::regclass)",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productline",
+      "DataType": "CHAR(2)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productmodelid",
+      "DataType": "int4",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productnumber",
+      "DataType": "varchar(25)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productsubcategoryid",
+      "DataType": "int4",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "reorderpoint",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "rowguid",
+      "DataType": "uuid",
+      "Nullable": false,
+      "Default": "uuid_generate_v1()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "safetystocklevel",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "sellenddate",
+      "DataType": "timestamp",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "sellstartdate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "size",
+      "DataType": "varchar(5)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "sizeunitmeasurecode",
+      "DataType": "CHAR(3)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "standardcost",
+      "DataType": "numeric",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "MAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "style",
+      "DataType": "CHAR(2)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "weight",
+      "DataType": "numeric(8, 2)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "MAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "weightunitmeasurecode",
+      "DataType": "CHAR(3)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PK_Product_ProductID",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": true,
+      "IndexColumns": "productid",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "FK_Product_ProductSubcategory_ProductSubcategoryID",
+      "Columns": "productsubcategoryid",
+      "RelatedTableSchema": "production",
+      "RelatedTable": "productsubcategory",
+      "RelatedColumns": "productsubcategoryid",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    },
+    {
+      "Name": "FK_Product_UnitMeasure_SizeUnitMeasureCode",
+      "Columns": "sizeunitmeasurecode",
+      "RelatedTableSchema": "production",
+      "RelatedTable": "unitmeasure",
+      "RelatedColumns": "unitmeasurecode",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    },
+    {
+      "Name": "FK_Product_UnitMeasure_WeightUnitMeasureCode",
+      "Columns": "weightunitmeasurecode",
+      "RelatedTableSchema": "production",
+      "RelatedTable": "unitmeasure",
+      "RelatedColumns": "unitmeasurecode",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    }
+  ],
+  "CheckConstraints": [
+    {
+      "Name": "CK_Product_Class",
+      "Expression": "(upper((class)::text) = ANY (ARRAY['L'::text, 'M'::text, 'H'::text])) OR (class IS NULL)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_DaysToManufacture",
+      "Expression": "daystomanufacture >= 0",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_ListPrice",
+      "Expression": "listprice >= 0.00",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_ProductLine",
+      "Expression": "(upper((productline)::text) = ANY (ARRAY['S'::text, 'T'::text, 'M'::text, 'R'::text])) OR (productline IS NULL)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_ReorderPoint",
+      "Expression": "reorderpoint > 0",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_SafetyStockLevel",
+      "Expression": "safetystocklevel > 0",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_SellEndDate",
+      "Expression": "(sellenddate >= sellstartdate) OR (sellenddate IS NULL)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_StandardCost",
+      "Expression": "standardcost >= 0.00",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_Style",
+      "Expression": "(upper((style)::text) = ANY (ARRAY['W'::text, 'M'::text, 'U'::text])) OR (style IS NULL)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    },
+    {
+      "Name": "CK_Product_Weight",
+      "Expression": "weight > 0.00",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    }
+  ],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "",
+  "MergeType": "NONE",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

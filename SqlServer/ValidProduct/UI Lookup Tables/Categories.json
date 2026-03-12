@@ -1,0 +1,16 @@
+{
+  "Items": [
+    {
+      "Code": "People",
+      "Description": "People"
+    },
+    {
+      "Code": "Places",
+      "Description": "Places"
+    },
+    {
+      "Code": "Things",
+      "Description": "Things"
+    }
+  ]
+}

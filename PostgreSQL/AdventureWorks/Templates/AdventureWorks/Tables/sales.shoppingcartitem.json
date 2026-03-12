@@ -1,0 +1,132 @@
+{
+  "Schema": "sales",
+  "Name": "shoppingcartitem",
+  "Columns": [
+    {
+      "Name": "datecreated",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "now()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "modifieddate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "now()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "productid",
+      "DataType": "int4",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "quantity",
+      "DataType": "int4",
+      "Nullable": false,
+      "Default": "1",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "shoppingcartid",
+      "DataType": "varchar(50)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "shoppingcartitemid",
+      "DataType": "int4",
+      "Nullable": false,
+      "Default": "nextval('sales.shoppingcartitem_shoppingcartitemid_seq'::regclass)",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PK_ShoppingCartItem_ShoppingCartItemID",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": true,
+      "IndexColumns": "shoppingcartitemid",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "FK_ShoppingCartItem_Product_ProductID",
+      "Columns": "productid",
+      "RelatedTableSchema": "production",
+      "RelatedTable": "product",
+      "RelatedColumns": "productid",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    }
+  ],
+  "CheckConstraints": [
+    {
+      "Name": "CK_ShoppingCartItem_Quantity",
+      "Expression": "quantity >= 1",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    }
+  ],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "",
+  "MergeType": "NONE",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

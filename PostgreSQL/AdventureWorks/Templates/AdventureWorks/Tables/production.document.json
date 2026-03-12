@@ -1,0 +1,225 @@
+{
+  "Schema": "production",
+  "Name": "document",
+  "Columns": [
+    {
+      "Name": "changenumber",
+      "DataType": "int4",
+      "Nullable": false,
+      "Default": "0",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "document",
+      "DataType": "bytea",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "documentnode",
+      "DataType": "varchar",
+      "Nullable": false,
+      "Default": "'/'::character varying",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "documentsummary",
+      "DataType": "text",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "fileextension",
+      "DataType": "varchar(8)",
+      "Nullable": true,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "filename",
+      "DataType": "varchar(400)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "folderflag",
+      "DataType": "\"public\".\"Flag\"",
+      "Nullable": false,
+      "Default": "false",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "modifieddate",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "now()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "owner",
+      "DataType": "int4",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "revision",
+      "DataType": "CHAR(5)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "rowguid",
+      "DataType": "uuid",
+      "Nullable": false,
+      "Default": "uuid_generate_v1()",
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "status",
+      "DataType": "int2",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "PLAIN",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "title",
+      "DataType": "varchar(50)",
+      "Nullable": false,
+      "Generated": "NEVER",
+      "Virtual": false,
+      "Storage": "EXTENDED",
+      "Compression": "DEFAULT",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PK_Document_DocumentNode",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": false,
+      "Clustered": true,
+      "IndexColumns": "documentnode",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    },
+    {
+      "Name": "document_rowguid_key",
+      "PrimaryKey": false,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "Clustered": false,
+      "IndexColumns": "rowguid",
+      "AccessMethod": "btree",
+      "ShouldApplyExpression": "",
+      "FillFactor": 90,
+      "NullsNotDistinct": false,
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "UpdateFillFactor": false
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "FK_Document_Employee_Owner",
+      "Columns": "owner",
+      "RelatedTableSchema": "humanresources",
+      "RelatedTable": "employee",
+      "RelatedColumns": "businessentityid",
+      "ShouldApplyExpression": "",
+      "DeleteAction": "",
+      "UpdateAction": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false,
+      "MatchType": "SIMPLE"
+    }
+  ],
+  "CheckConstraints": [
+    {
+      "Name": "CK_Document_Status",
+      "Expression": "(status >= 1) AND (status <= 3)",
+      "ShouldApplyExpression": "",
+      "Deferrable": false,
+      "InitiallyDeferred": false
+    }
+  ],
+  "Statistics": [],
+  "ExcludeConstraints": [],
+  "ShouldApplyExpression": "",
+  "ContentFile": "",
+  "MergeType": "NONE",
+  "MergeDisableTriggers": false,
+  "MergeDisableRules": false,
+  "MergeUpdateDescendents": true,
+  "OldName": "",
+  "RowLevelSecurity": false,
+  "ForceRowLevelSecurity": false,
+  "AccessMethod": "heap",
+  "PersistenceType": "Logged",
+  "UpdateFillFactor": false,
+  "FillFactor": 100
+}

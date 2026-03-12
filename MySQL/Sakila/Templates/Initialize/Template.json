@@ -1,0 +1,15 @@
+{
+  "Name": "Initialize",
+  "SchemaIdentificationScript": "SELECT SCHEMA_NAME FROM information_schema.schemata WHERE SCHEMA_NAME = 'TestMain' AND NOT EXISTS (SELECT * FROM information_schema.schemata WHERE SCHEMA_NAME = 'Sakila')",
+  "IndexOnlyTableQuenches": false,
+  "ScriptFolders": [
+    {
+      "FolderPath": "Before Scripts",
+      "QuenchSlot": "Before"
+    }
+  ],
+  "Required": false,
+  "ServerToQuench": "Primary",
+  "ScriptTokens": {},
+  "UpdateFillFactor": true
+}

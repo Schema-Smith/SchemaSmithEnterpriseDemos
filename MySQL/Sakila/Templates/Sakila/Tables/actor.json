@@ -1,0 +1,75 @@
+{
+  "Name": "`actor`",
+  "Engine": "InnoDB",
+  "RowFormat": "Dynamic",
+  "CharacterSet": "utf8mb4",
+  "Collation": "utf8mb4_0900_ai_ci",
+  "AutoIncrementValue": 200,
+  "Columns": [
+    {
+      "Name": "`actor_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": true,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`first_name`",
+      "DataType": "varchar(45)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_name`",
+      "DataType": "varchar(45)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_update`",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "CURRENT_TIMESTAMP",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "idx_actor_last_name",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`last_name`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "PRIMARY",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "IndexType": "BTREE",
+      "IndexColumns": "`actor_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "ForeignKeys": [],
+  "CheckConstraints": [],
+  "FullTextIndexes": [],
+  "ShouldApplyExpression": "",
+  "OldName": "",
+  "ContentFile": "TableContents/actor.tabledata",
+  "MergeType": "Upsert",
+  "MergeDisableTriggers": false
+}

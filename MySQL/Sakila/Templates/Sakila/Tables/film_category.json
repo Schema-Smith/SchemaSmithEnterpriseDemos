@@ -1,0 +1,85 @@
+{
+  "Name": "`film_category`",
+  "Engine": "InnoDB",
+  "RowFormat": "Dynamic",
+  "CharacterSet": "utf8mb4",
+  "Collation": "utf8mb4_0900_ai_ci",
+  "Columns": [
+    {
+      "Name": "`film_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`category_id`",
+      "DataType": "tinyint unsigned",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_update`",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "CURRENT_TIMESTAMP",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "fk_film_category_category",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`category_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "PRIMARY",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "IndexType": "BTREE",
+      "IndexColumns": "`film_id`,`category_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "fk_film_category_category",
+      "Columns": "`category_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`category`",
+      "RelatedColumns": "`category_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "fk_film_category_film",
+      "Columns": "`film_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`film`",
+      "RelatedColumns": "`film_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "CheckConstraints": [],
+  "FullTextIndexes": [],
+  "ShouldApplyExpression": "",
+  "OldName": "",
+  "ContentFile": "TableContents/film_category.tabledata",
+  "MergeType": "Upsert",
+  "MergeDisableTriggers": false
+}

@@ -1,0 +1,139 @@
+{
+  "Name": "`address`",
+  "Engine": "InnoDB",
+  "RowFormat": "Dynamic",
+  "CharacterSet": "utf8mb4",
+  "Collation": "utf8mb4_0900_ai_ci",
+  "AutoIncrementValue": 605,
+  "Columns": [
+    {
+      "Name": "`address_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": true,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`address`",
+      "DataType": "varchar(50)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`address2`",
+      "DataType": "varchar(50)",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`district`",
+      "DataType": "varchar(20)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`city_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`postal_code`",
+      "DataType": "varchar(10)",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`phone`",
+      "DataType": "varchar(20)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`location`",
+      "DataType": "geometry",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_update`",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "CURRENT_TIMESTAMP",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "idx_fk_city_id",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`city_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "idx_location",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "SPATIAL",
+      "IndexColumns": "`location`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "PRIMARY",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "IndexType": "BTREE",
+      "IndexColumns": "`address_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "fk_address_city",
+      "Columns": "`city_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`city`",
+      "RelatedColumns": "`city_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "CheckConstraints": [],
+  "FullTextIndexes": [],
+  "ShouldApplyExpression": "",
+  "OldName": "",
+  "ContentFile": "TableContents/address.tabledata",
+  "MergeType": "Upsert",
+  "MergeDisableTriggers": false
+}

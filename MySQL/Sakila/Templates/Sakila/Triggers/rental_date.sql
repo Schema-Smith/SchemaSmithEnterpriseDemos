@@ -1,0 +1,10 @@
+DROP TRIGGER IF EXISTS `rental_date`;
+DELIMITER //
+CREATE TRIGGER `rental_date`
+  BEFORE INSERT
+  ON `rental` 
+  FOR EACH ROW 
+BEGIN
+SET NEW.rental_date = NOW();
+END //
+DELIMITER ;

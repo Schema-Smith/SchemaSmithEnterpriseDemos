@@ -1,0 +1,30 @@
+
+DO $$
+BEGIN
+
+CREATE SEQUENCE IF NOT EXISTS "humanresources"."department_departmentid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "humanresources"."jobcandidate_jobcandidateid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "humanresources"."shift_shiftid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+END
+$$;

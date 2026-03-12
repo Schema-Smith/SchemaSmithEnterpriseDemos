@@ -1,0 +1,74 @@
+{
+  "Name": "Northwind",
+  "DatabaseIdentificationScript": "SELECT datname FROM pg_database WHERE datname = '{{NorthwindDb}}'",
+  "IndexOnlyTableQuenches": false,
+  "ScriptFolders": [
+    {
+      "FolderPath": "Before Scripts",
+      "QuenchSlot": "Before"
+    },
+    {
+      "FolderPath": "Schemas",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Domain Types",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Enum Types",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Composite Types",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Functions",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Trigger Functions",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Window Functions",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Aggregates",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Procedures",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Sequences",
+      "QuenchSlot": "Objects"
+    },
+    {
+      "FolderPath": "Rules",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "Triggers",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "Views",
+      "QuenchSlot": "AfterTablesObjects"
+    },
+    {
+      "FolderPath": "Table Data",
+      "QuenchSlot": "TableData"
+    },
+    {
+      "FolderPath": "After Scripts",
+      "QuenchSlot": "After"
+    }
+  ],
+  "ScriptTokens": {},
+  "UpdateFillFactor": true,
+  "Required": true
+}

@@ -4,52 +4,58 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write # enable write permissions for pull request comments
+  pull-requests: write
 
 jobs:
-  json-yaml-validate-adventureworks:
+  validate:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          # SQL Server
+          - name: SqlServer-AdventureWorks
+            schema: SqlServer/AdventureWorks/.json-schemas/tables.sqlserver.schema
+            base_dir: SqlServer/AdventureWorks/Templates/AdventureWorks/Tables
+          - name: SqlServer-Northwind
+            schema: SqlServer/Northwind/.json-schemas/tables.sqlserver.schema
+            base_dir: SqlServer/Northwind/Templates/Northwind/Tables
+          - name: SqlServer-ValidProduct
+            schema: SqlServer/ValidProduct/.json-schemas/tables.sqlserver.schema
+            files: |
+              SqlServer/ValidProduct/Templates/Main/Tables/**/*.json
+              SqlServer/ValidProduct/Templates/Secondary/Tables/**/*.json
+          # PostgreSQL
+          - name: PostgreSQL-AdventureWorks
+            schema: PostgreSQL/AdventureWorks/.json-schemas/tables.postgresql.schema
+            base_dir: PostgreSQL/AdventureWorks/Templates/AdventureWorks/Tables
+          - name: PostgreSQL-DVDRental
+            schema: PostgreSQL/DVDRental/.json-schemas/tables.postgresql.schema
+            base_dir: PostgreSQL/DVDRental/Templates/DVDRental/Tables
+          - name: PostgreSQL-Northwind
+            schema: PostgreSQL/Northwind/.json-schemas/tables.postgresql.schema
+            base_dir: PostgreSQL/Northwind/Templates/Northwind/Tables
+          - name: PostgreSQL-ValidProduct
+            schema: PostgreSQL/ValidProduct/.json-schemas/tables.postgresql.schema
+            files: |
+              PostgreSQL/ValidProduct/Templates/Main/Tables/**/*.json
+              PostgreSQL/ValidProduct/Templates/Secondary/Tables/**/*.json
+          # MySQL
+          - name: MySQL-Sakila
+            schema: MySQL/Sakila/.json-schemas/tables.mysql.schema
+            base_dir: MySQL/Sakila/Templates/Sakila/Tables
+          - name: MySQL-ValidProduct
+            schema: MySQL/ValidProduct/.json-schemas/tables.mysql.schema
+            files: |
+              MySQL/ValidProduct/Templates/Main/Tables/**/*.json
     steps:
       - uses: actions/checkout@v4
 
-      - name: json-yaml-validate-adventureworks
-        id: json-yaml-validate-adventureworks
+      - name: Validate ${{ matrix.name }}
         uses: GrantBirki/json-yaml-validate@v2.6.0
         with:
-          comment: "true" # enable comment mode
+          comment: "true"
           use_gitignore: "false"
           ajv_strict_mode: "false"
-          json_schema: "./AdventureWorks/.json-schemas/tables.schema"
-          base_dir: "./AdventureWorks/Templates/AdventureWorks/Tables"
-
-  json-yaml-validate-northwind:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: json-yaml-validate-northwind
-        id: json-yaml-validate-northwind
-        uses: GrantBirki/json-yaml-validate@v2.6.0
-        with:
-          comment: "true" # enable comment mode
-          use_gitignore: "false"
-          ajv_strict_mode: "false"
-          json_schema: "./Northwind/.json-schemas/tables.schema"
-          base_dir: "./Northwind/Templates/Northwind/Tables"
-
-  json-yaml-validate-validproduct:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: json-yaml-validate-validproduct
-        id: json-yaml-validate-validproduct
-        uses: GrantBirki/json-yaml-validate@v2.6.0
-        with:
-          comment: "true" # enable comment mode
-          use_gitignore: "false"
-          ajv_strict_mode: "false"
-          json_schema: "./ValidProduct/.json-schemas/tables.schema"
-          files: |
-            ./ValidProduct/Templates/Main/Tables/**/*.json
-            ./ValidProduct/Templates/Secondary/Tables/**/*.json
+          json_schema: ${{ matrix.schema }}
+          base_dir: ${{ matrix.base_dir || '' }}
+          files: ${{ matrix.files || '' }}

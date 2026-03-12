@@ -1,0 +1,194 @@
+{
+  "Name": "`film`",
+  "Engine": "InnoDB",
+  "RowFormat": "Dynamic",
+  "CharacterSet": "utf8mb4",
+  "Collation": "utf8mb4_0900_ai_ci",
+  "AutoIncrementValue": 1000,
+  "Columns": [
+    {
+      "Name": "`film_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": true,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`title`",
+      "DataType": "varchar(128)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`description`",
+      "DataType": "text",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`release_year`",
+      "DataType": "year",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`language_id`",
+      "DataType": "tinyint unsigned",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`original_language_id`",
+      "DataType": "tinyint unsigned",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`rental_duration`",
+      "DataType": "tinyint unsigned",
+      "Nullable": false,
+      "Default": "3",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`rental_rate`",
+      "DataType": "decimal(4,2)",
+      "Nullable": false,
+      "Default": "4.99",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`length`",
+      "DataType": "smallint unsigned",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`replacement_cost`",
+      "DataType": "decimal(5,2)",
+      "Nullable": false,
+      "Default": "19.99",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`rating`",
+      "DataType": "enum('G','PG','PG-13','R','NC-17')",
+      "Nullable": true,
+      "Default": "'G'",
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`special_features`",
+      "DataType": "set('Trailers','Commentaries','Deleted Scenes','Behind the Scenes')",
+      "Nullable": true,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_update`",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "CURRENT_TIMESTAMP",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "idx_fk_language_id",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`language_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "idx_fk_original_language_id",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`original_language_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "idx_title",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`title`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "PRIMARY",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "IndexType": "BTREE",
+      "IndexColumns": "`film_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "fk_film_language",
+      "Columns": "`language_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`language`",
+      "RelatedColumns": "`language_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "fk_film_language_original",
+      "Columns": "`original_language_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`language`",
+      "RelatedColumns": "`language_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "CheckConstraints": [],
+  "FullTextIndexes": [],
+  "ShouldApplyExpression": "",
+  "OldName": "",
+  "ContentFile": "TableContents/film.tabledata",
+  "MergeType": "Upsert",
+  "MergeDisableTriggers": false
+}

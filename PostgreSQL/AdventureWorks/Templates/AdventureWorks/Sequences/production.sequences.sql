@@ -1,0 +1,110 @@
+
+DO $$
+BEGIN
+
+CREATE SEQUENCE IF NOT EXISTS "production"."billofmaterials_billofmaterialsid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."illustration_illustrationid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."location_locationid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."product_productid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."productcategory_productcategoryid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."productdescription_productdescriptionid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."productmodel_productmodelid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."productphoto_productphotoid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."productreview_productreviewid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."productsubcategory_productsubcategoryid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."scrapreason_scrapreasonid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."transactionhistory_transactionid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+CREATE SEQUENCE IF NOT EXISTS "production"."workorder_workorderid_seq"
+  AS INT INCREMENT BY 1
+  MINVALUE 1
+  MAXVALUE 2147483647
+  START WITH 1
+  CACHE 1
+  NO CYCLE;
+
+END
+$$;

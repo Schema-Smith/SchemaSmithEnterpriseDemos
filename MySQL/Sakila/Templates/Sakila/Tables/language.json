@@ -1,0 +1,56 @@
+{
+  "Name": "`language`",
+  "Engine": "InnoDB",
+  "RowFormat": "Dynamic",
+  "CharacterSet": "utf8mb4",
+  "Collation": "utf8mb4_0900_ai_ci",
+  "AutoIncrementValue": 6,
+  "Columns": [
+    {
+      "Name": "`language_id`",
+      "DataType": "tinyint unsigned",
+      "Nullable": false,
+      "AutoIncrement": true,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`name`",
+      "DataType": "char(20)",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "CharacterSet": "utf8mb4",
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_update`",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "CURRENT_TIMESTAMP",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PRIMARY",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "IndexType": "BTREE",
+      "IndexColumns": "`language_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "ForeignKeys": [],
+  "CheckConstraints": [],
+  "FullTextIndexes": [],
+  "ShouldApplyExpression": "",
+  "OldName": "",
+  "ContentFile": "TableContents/language.tabledata",
+  "MergeType": "Upsert",
+  "MergeDisableTriggers": false
+}

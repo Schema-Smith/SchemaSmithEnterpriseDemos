@@ -1,0 +1,85 @@
+{
+  "Name": "`film_actor`",
+  "Engine": "InnoDB",
+  "RowFormat": "Dynamic",
+  "CharacterSet": "utf8mb4",
+  "Collation": "utf8mb4_0900_ai_ci",
+  "Columns": [
+    {
+      "Name": "`actor_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`film_id`",
+      "DataType": "smallint unsigned",
+      "Nullable": false,
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    },
+    {
+      "Name": "`last_update`",
+      "DataType": "timestamp",
+      "Nullable": false,
+      "Default": "CURRENT_TIMESTAMP",
+      "AutoIncrement": false,
+      "ShouldApplyExpression": "",
+      "OldName": ""
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "idx_fk_film_id",
+      "PrimaryKey": false,
+      "Unique": false,
+      "UniqueConstraint": false,
+      "IndexType": "BTREE",
+      "IndexColumns": "`film_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "PRIMARY",
+      "PrimaryKey": true,
+      "Unique": true,
+      "UniqueConstraint": true,
+      "IndexType": "BTREE",
+      "IndexColumns": "`actor_id`,`film_id`",
+      "Visible": true,
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "ForeignKeys": [
+    {
+      "Name": "fk_film_actor_actor",
+      "Columns": "`actor_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`actor`",
+      "RelatedColumns": "`actor_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    },
+    {
+      "Name": "fk_film_actor_film",
+      "Columns": "`film_id`",
+      "RelatedTableSchema": "",
+      "RelatedTable": "`film`",
+      "RelatedColumns": "`film_id`",
+      "DeleteAction": "RESTRICT",
+      "UpdateAction": "CASCADE",
+      "ShouldApplyExpression": ""
+    }
+  ],
+  "CheckConstraints": [],
+  "FullTextIndexes": [],
+  "ShouldApplyExpression": "",
+  "OldName": "",
+  "ContentFile": "TableContents/film_actor.tabledata",
+  "MergeType": "Upsert",
+  "MergeDisableTriggers": false
+}

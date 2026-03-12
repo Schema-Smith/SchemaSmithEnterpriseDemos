@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "x-core": true
+    },
+    "DatabaseIdentificationScript": {
+      "type": "string",
+      "x-core": true
+    },
+    "VersionStampScript": {
+      "type": "string",
+      "x-core": true
+    },
+    "IndexOnlyTableQuenches": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "ScriptFolders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "FolderPath": {
+            "type": "string",
+            "x-core": true
+          },
+          "QuenchSlot": {
+            "type": "string",
+            "enum": [
+              "Before",
+              "Objects",
+              "BetweenTablesAndKeys",
+              "AfterTablesScripts",
+              "AfterTablesObjects",
+              "TableData",
+              "After",
+              "None"
+            ],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "FolderPath"
+        ]
+      },
+      "x-core": true
+    },
+    "ScriptTokens": {
+      "type": "object",
+      "x-core": true
+    },
+    "UpdateFillFactor": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "BaselineValidationScript": {
+      "type": "string",
+      "x-core": true
+    },
+    "Required": {
+      "type": "boolean",
+      "x-core": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Name",
+    "DatabaseIdentificationScript",
+    "ScriptFolders",
+    "ScriptTokens",
+    "ServerToQuench"
+  ],
+  "x-core-version": "1.0.0"
+}

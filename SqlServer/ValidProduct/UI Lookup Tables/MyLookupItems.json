@@ -1,0 +1,16 @@
+{
+  "Items": [
+    {
+      "Code": "Item1",
+      "Description": "This is item one"
+    },
+    {
+      "Code": "Item2",
+      "Description": "This is item two"
+    },
+    {
+      "Code": "Item3",
+      "Description": "This is item three"
+    }
+  ]
+}

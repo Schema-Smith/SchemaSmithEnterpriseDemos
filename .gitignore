@@ -3,5 +3,6 @@
 .idea
 *.DotSettings.user
 
-
-
+.claude/
+.mcp.json
+CLAUDE.md

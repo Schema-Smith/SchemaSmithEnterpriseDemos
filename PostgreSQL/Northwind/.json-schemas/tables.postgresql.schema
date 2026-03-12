@@ -1,0 +1,461 @@
+{
+  "type": "object",
+  "properties": {
+    "Schema": {
+      "type": "string",
+      "x-core": true
+    },
+    "Name": {
+      "type": "string",
+      "x-core": true
+    },
+    "Columns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "x-core": true
+          },
+          "DataType": {
+            "type": "string",
+            "x-core": true
+          },
+          "Nullable": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Default": {
+            "type": "string",
+            "x-core": true
+          },
+          "Collation": {
+            "type": "string",
+            "x-core": true
+          },
+          "Generated": {
+            "type": "string",
+            "x-core": true
+          },
+          "GenerationExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "Virtual": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Storage": {
+            "type": "string",
+            "x-core": true
+          },
+          "Compression": {
+            "type": "string",
+            "x-core": true
+          },
+          "ShouldApplyExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "OldName": {
+            "type": "string",
+            "x-core": true
+          },
+          "Item": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false,
+            "required": [],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "DataType"
+        ]
+      },
+      "x-core": true
+    },
+    "Indexes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "x-core": true
+          },
+          "PrimaryKey": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Unique": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "UniqueConstraint": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Clustered": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "IndexColumns": {
+            "type": "string",
+            "x-core": true
+          },
+          "IncludeColumns": {
+            "type": "string",
+            "x-core": true
+          },
+          "AccessMethod": {
+            "type": "string",
+            "x-core": true
+          },
+          "FilterExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "ShouldApplyExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "FillFactor": {
+            "type": "integer",
+            "minimum": 0.0,
+            "maximum": 100.0,
+            "x-core": true
+          },
+          "NullsNotDistinct": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Deferrable": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "InitiallyDeferred": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "UpdateFillFactor": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Item": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false,
+            "required": [],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "IndexColumns"
+        ]
+      },
+      "x-core": true
+    },
+    "ForeignKeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "x-core": true
+          },
+          "Columns": {
+            "type": "string",
+            "x-core": true
+          },
+          "RelatedTableSchema": {
+            "type": "string",
+            "x-core": true
+          },
+          "RelatedTable": {
+            "type": "string",
+            "x-core": true
+          },
+          "RelatedColumns": {
+            "type": "string",
+            "x-core": true
+          },
+          "ShouldApplyExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "DeleteAction": {
+            "type": "string",
+            "pattern": "NO ACTION|RESTRICT|CASCADE|SET NULL|SET DEFAULT",
+            "x-core": true
+          },
+          "UpdateAction": {
+            "type": "string",
+            "pattern": "NO ACTION|RESTRICT|CASCADE|SET NULL|SET DEFAULT",
+            "x-core": true
+          },
+          "Deferrable": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "InitiallyDeferred": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "MatchType": {
+            "type": "string",
+            "pattern": "FULL|PARTIAL|SIMPLE",
+            "x-core": true
+          },
+          "Item": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false,
+            "required": [],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Columns",
+          "RelatedTable",
+          "RelatedColumns"
+        ]
+      },
+      "x-core": true
+    },
+    "CheckConstraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "x-core": true
+          },
+          "Expression": {
+            "type": "string",
+            "x-core": true
+          },
+          "ShouldApplyExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "Deferrable": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "InitiallyDeferred": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Item": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false,
+            "required": [],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Expression"
+        ]
+      },
+      "x-core": true
+    },
+    "Statistics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "x-core": true
+          },
+          "Kind": {
+            "type": "string",
+            "x-core": true
+          },
+          "StatisticsColumns": {
+            "type": "string",
+            "x-core": true
+          },
+          "ShouldApplyExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "Item": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false,
+            "required": [],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "StatisticsColumns"
+        ]
+      },
+      "x-core": true
+    },
+    "ExcludeConstraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "x-core": true
+          },
+          "AccessMethod": {
+            "type": "string",
+            "x-core": true
+          },
+          "ExcludeColumns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Column": {
+                  "type": "string",
+                  "x-core": true
+                },
+                "Operator": {
+                  "type": "string",
+                  "x-core": true
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Column",
+                "Operator"
+              ]
+            },
+            "x-core": true
+          },
+          "FilterExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "ShouldApplyExpression": {
+            "type": "string",
+            "x-core": true
+          },
+          "Deferrable": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "InitiallyDeferred": {
+            "type": "boolean",
+            "x-core": true
+          },
+          "Item": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false,
+            "required": [],
+            "x-core": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "ExcludeColumns"
+        ]
+      },
+      "x-core": true
+    },
+    "ShouldApplyExpression": {
+      "type": "string",
+      "x-core": true
+    },
+    "ContentFile": {
+      "type": "string",
+      "x-core": true
+    },
+    "MergeType": {
+      "type": "string",
+      "pattern": "Insert|Insert/Update|Insert/Update/Delete",
+      "x-core": true
+    },
+    "MatchColumns": {
+      "type": "string",
+      "x-core": true
+    },
+    "MergeFilter": {
+      "type": "string",
+      "x-core": true
+    },
+    "MergeDisableTriggers": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "MergeDisableRules": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "MergeUpdateDescendents": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "OldName": {
+      "type": "string",
+      "x-core": true
+    },
+    "RowLevelSecurity": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "ForceRowLevelSecurity": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "AccessMethod": {
+      "type": "string",
+      "x-core": true
+    },
+    "PersistenceType": {
+      "type": "string",
+      "x-core": true
+    },
+    "UpdateFillFactor": {
+      "type": "boolean",
+      "x-core": true
+    },
+    "FillFactor": {
+      "type": "integer",
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "x-core": true
+    },
+    "Item": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": [],
+      "x-core": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Name",
+    "Columns",
+    "Indexes",
+    "ForeignKeys",
+    "CheckConstraints",
+    "Statistics",
+    "ExcludeConstraints"
+  ],
+  "x-core-version": "1.0.0"
+}

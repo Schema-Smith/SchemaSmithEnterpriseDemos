@@ -1,0 +1,4 @@
+DO $$
+BEGIN
+  RAISE NOTICE 'SQL Job 1';
+END $$;
