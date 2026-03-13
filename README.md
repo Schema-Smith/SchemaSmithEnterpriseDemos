@@ -43,4 +43,3 @@ The `Sample Menu Commands/` folder contains importable menu configurations for [
 ## Additional Resources
 
 - [SchemaSmith Website](https://schemasmith.com) -- documentation and getting started guides
-- [SchemaForge](https://github.com/Schema-Smith/SchemaForge) -- the unified schema management toolset

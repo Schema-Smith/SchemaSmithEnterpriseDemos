@@ -8,6 +8,10 @@
       "QuenchSlot": "Before"
     },
     {
+      "FolderPath": "Extensions",
+      "QuenchSlot": "Objects"
+    },
+    {
       "FolderPath": "Schemas",
       "QuenchSlot": "Objects"
     },
