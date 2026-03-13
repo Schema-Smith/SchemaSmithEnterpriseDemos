@@ -117,7 +117,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/sales.shoppingcartitem.tabledata",
+  "ContentFile": "TableContents/sales.shoppingcartitem.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

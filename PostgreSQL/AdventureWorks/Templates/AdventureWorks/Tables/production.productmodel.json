@@ -94,7 +94,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/production.productmodel.tabledata",
+  "ContentFile": "TableContents/production.productmodel.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

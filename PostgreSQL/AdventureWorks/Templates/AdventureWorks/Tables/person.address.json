@@ -141,7 +141,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/person.address.tabledata",
+  "ContentFile": "TableContents/person.address.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

@@ -120,7 +120,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/sales.store.tabledata",
+  "ContentFile": "TableContents/sales.store.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

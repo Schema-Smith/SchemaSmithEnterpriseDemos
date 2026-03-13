@@ -60,7 +60,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/production.illustration.tabledata",
+  "ContentFile": "TableContents/production.illustration.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

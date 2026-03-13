@@ -135,7 +135,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/production.transactionhistoryarchive.tabledata",
+  "ContentFile": "TableContents/production.transactionhistoryarchive.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

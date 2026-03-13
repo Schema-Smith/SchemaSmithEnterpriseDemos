@@ -182,7 +182,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/purchasing.purchaseorderdetail.tabledata",
+  "ContentFile": "TableContents/purchasing.purchaseorderdetail.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

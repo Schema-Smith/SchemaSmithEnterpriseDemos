@@ -241,7 +241,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/purchasing.purchaseorderheader.tabledata",
+  "ContentFile": "TableContents/purchasing.purchaseorderheader.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

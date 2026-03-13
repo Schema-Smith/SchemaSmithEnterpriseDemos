@@ -122,7 +122,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/person.businessentitycontact.tabledata",
+  "ContentFile": "TableContents/person.businessentitycontact.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

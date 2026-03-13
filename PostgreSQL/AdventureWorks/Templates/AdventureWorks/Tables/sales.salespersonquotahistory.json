@@ -104,7 +104,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/sales.salespersonquotahistory.tabledata",
+  "ContentFile": "TableContents/sales.salespersonquotahistory.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

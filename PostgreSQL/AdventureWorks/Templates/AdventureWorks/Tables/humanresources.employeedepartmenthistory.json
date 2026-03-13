@@ -140,7 +140,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/humanresources.employeedepartmenthistory.tabledata",
+  "ContentFile": "TableContents/humanresources.employeedepartmenthistory.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

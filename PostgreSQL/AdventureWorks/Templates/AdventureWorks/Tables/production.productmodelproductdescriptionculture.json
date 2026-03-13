@@ -84,7 +84,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/production.productmodelproductdescriptionculture.tabledata",
+  "ContentFile": "TableContents/production.productmodelproductdescriptionculture.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

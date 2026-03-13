@@ -230,7 +230,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/purchasing.productvendor.tabledata",
+  "ContentFile": "TableContents/purchasing.productvendor.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

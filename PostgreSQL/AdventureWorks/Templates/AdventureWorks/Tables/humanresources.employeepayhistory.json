@@ -110,7 +110,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/humanresources.employeepayhistory.tabledata",
+  "ContentFile": "TableContents/humanresources.employeepayhistory.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

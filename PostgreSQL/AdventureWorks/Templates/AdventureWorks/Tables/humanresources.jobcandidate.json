@@ -85,7 +85,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/humanresources.jobcandidate.tabledata",
+  "ContentFile": "TableContents/humanresources.jobcandidate.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,

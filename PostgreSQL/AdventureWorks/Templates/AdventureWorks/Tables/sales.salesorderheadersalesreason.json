@@ -86,7 +86,7 @@
   "Statistics": [],
   "ExcludeConstraints": [],
   "ShouldApplyExpression": "",
-  "ContentFile": "Table Data/sales.salesorderheadersalesreason.tabledata",
+  "ContentFile": "TableContents/sales.salesorderheadersalesreason.tabledata",
   "MergeType": "Insert/Update",
   "MergeDisableTriggers": false,
   "MergeDisableRules": false,
