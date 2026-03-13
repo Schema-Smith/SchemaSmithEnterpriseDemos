@@ -84,7 +84,7 @@
     },
     {
       "Name": "spatiallocation",
-      "DataType": "bytea",
+      "DataType": "geometry(Point,4326)",
       "Nullable": true,
       "Generated": "NEVER",
       "Virtual": false,

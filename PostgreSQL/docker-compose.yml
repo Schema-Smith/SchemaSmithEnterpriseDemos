@@ -54,7 +54,7 @@ services:
         condition: service_healthy
 
   demoserver:
-    image: postgres:latest # Use the latest PostgreSQL image
+    image: postgis/postgis:latest # PostGIS-enabled PostgreSQL for spatial data support
     ports:
       - "${PostGreSQL_PORT:-5432}:5432"
     environment:
