@@ -1,3 +1,5 @@
+name: schemasmith-sqlserver-demo
+
 services:
   quench-validproduct:
     image: schemasmithyfree/schemaquenchenterprisedemo:latest

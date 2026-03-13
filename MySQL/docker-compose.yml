@@ -1,3 +1,5 @@
+name: schemasmith-mysql-demo
+
 services:
   quench-validproduct:
     image: schemasmithyfree/schemaquenchenterprisedemo:latest
@@ -22,8 +24,8 @@ services:
     volumes:
       - ./Sakila:/metadata
     depends_on:
-      demoserver:
-        condition: service_healthy
+      quench-validproduct: # Serialize to avoid kindling race on shared TestMain database
+        condition: service_completed_successfully
 
 #  quench-adventureworks:
 #    image: schemasmithyfree/schemaquenchenterprisedemo:latest

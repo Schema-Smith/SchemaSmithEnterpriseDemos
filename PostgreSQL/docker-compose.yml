@@ -1,3 +1,5 @@
+name: schemasmith-postgresql-demo
+
 services:
   quench-dvdrental:
     image: schemasmithyfree/schemaquenchenterprisedemo:latest
