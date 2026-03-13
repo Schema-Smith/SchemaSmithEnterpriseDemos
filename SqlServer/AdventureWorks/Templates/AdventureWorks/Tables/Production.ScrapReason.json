@@ -71,7 +71,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents/Production.ScrapReason.content",
+  "ContentFile": "TableContents/Production.ScrapReason.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

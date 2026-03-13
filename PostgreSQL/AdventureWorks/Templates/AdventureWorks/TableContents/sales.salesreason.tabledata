@@ -1,0 +1,12 @@
+[
+{"salesreasonid":1,"name":"Price","reasontype":"Other","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":2,"name":"On Promotion","reasontype":"Promotion","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":3,"name":"Magazine Advertisement","reasontype":"Marketing","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":4,"name":"Television  Advertisement","reasontype":"Marketing","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":5,"name":"Manufacturer","reasontype":"Other","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":6,"name":"Review","reasontype":"Other","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":7,"name":"Demo Event","reasontype":"Marketing","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":8,"name":"Sponsorship","reasontype":"Marketing","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":9,"name":"Quality","reasontype":"Other","modifieddate":"2008-04-30T00:00:00"},
+{"salesreasonid":10,"name":"Other","reasontype":"Other","modifieddate":"2008-04-30T00:00:00"}
+]

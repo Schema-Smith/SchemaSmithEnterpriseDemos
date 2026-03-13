@@ -98,7 +98,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents/Production.ProductCategory.content",
+  "ContentFile": "TableContents/Production.ProductCategory.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

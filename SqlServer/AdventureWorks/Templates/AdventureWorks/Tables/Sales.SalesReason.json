@@ -69,7 +69,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents/Sales.SalesReason.content",
+  "ContentFile": "TableContents/Sales.SalesReason.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

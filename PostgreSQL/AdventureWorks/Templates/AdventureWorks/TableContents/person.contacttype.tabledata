@@ -1,0 +1,22 @@
+[
+{"contacttypeid":1,"name":"Accounting Manager","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":2,"name":"Assistant Sales Agent","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":3,"name":"Assistant Sales Representative","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":4,"name":"Coordinator Foreign Markets","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":5,"name":"Export Administrator","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":6,"name":"International Marketing Manager","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":7,"name":"Marketing Assistant","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":8,"name":"Marketing Manager","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":9,"name":"Marketing Representative","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":10,"name":"Order Administrator","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":11,"name":"Owner","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":12,"name":"Owner/Marketing Assistant","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":13,"name":"Product Manager","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":14,"name":"Purchasing Agent","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":15,"name":"Purchasing Manager","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":16,"name":"Regional Account Representative","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":17,"name":"Sales Agent","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":18,"name":"Sales Associate","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":19,"name":"Sales Manager","modifieddate":"2008-04-30T00:00:00"},
+{"contacttypeid":20,"name":"Sales Representative","modifieddate":"2008-04-30T00:00:00"}
+]

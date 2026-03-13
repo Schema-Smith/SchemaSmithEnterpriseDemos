@@ -71,7 +71,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents/Person.ContactType.content",
+  "ContentFile": "TableContents/Person.ContactType.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",

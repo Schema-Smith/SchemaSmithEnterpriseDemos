@@ -1,0 +1,7 @@
+[
+{"shipmethodid":1,"name":"XRQ - TRUCK GROUND","shipbase":3.95,"shiprate":0.99,"rowguid":"6BE756D9-D7BE-4463-8F2C-AE60C710D606","modifieddate":"2008-04-30T00:00:00"},
+{"shipmethodid":2,"name":"ZY - EXPRESS","shipbase":9.95,"shiprate":1.99,"rowguid":"3455079B-F773-4DC6-8F1E-2A58649C4AB8","modifieddate":"2008-04-30T00:00:00"},
+{"shipmethodid":3,"name":"OVERSEAS - DELUXE","shipbase":29.95,"shiprate":2.99,"rowguid":"22F4E461-28CF-4ACE-A980-F686CF112EC8","modifieddate":"2008-04-30T00:00:00"},
+{"shipmethodid":4,"name":"OVERNIGHT J-FAST","shipbase":21.95,"shiprate":1.29,"rowguid":"107E8356-E7A8-463D-B60C-079FFF467F3F","modifieddate":"2008-04-30T00:00:00"},
+{"shipmethodid":5,"name":"CARGO TRANSPORT 5","shipbase":8.99,"shiprate":1.49,"rowguid":"B166019A-B134-4E76-B957-2B0490C610ED","modifieddate":"2008-04-30T00:00:00"}
+]

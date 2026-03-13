@@ -1,0 +1,18 @@
+[
+{"scrapreasonid":1,"name":"Brake assembly not as ordered","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":2,"name":"Color incorrect","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":3,"name":"Gouge in metal","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":4,"name":"Drill pattern incorrect","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":5,"name":"Drill size too large","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":6,"name":"Drill size too small","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":7,"name":"Handling damage","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":8,"name":"Paint process failed","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":9,"name":"Primer process failed","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":10,"name":"Seat assembly not as ordered","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":11,"name":"Stress test failed","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":12,"name":"Thermoform temperature too high","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":13,"name":"Thermoform temperature too low","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":14,"name":"Trim length too long","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":15,"name":"Trim length too short","modifieddate":"2008-04-30T00:00:00"},
+{"scrapreasonid":16,"name":"Wheel misaligned","modifieddate":"2008-04-30T00:00:00"}
+]

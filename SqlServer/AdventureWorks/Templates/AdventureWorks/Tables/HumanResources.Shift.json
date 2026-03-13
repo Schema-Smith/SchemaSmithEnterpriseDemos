@@ -109,7 +109,7 @@
       }
     }
   ],
-  "ContentFile": "TableContents/HumanResources.Shift.content",
+  "ContentFile": "TableContents/HumanResources.Shift.tabledata",
   "MergeType": "Insert/Update",
   "MatchColumns": "",
   "MergeFilter": "",
